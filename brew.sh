@@ -6,6 +6,7 @@ brew install vim
 # casks
 brew cask install google-chrome
 brew cask install firefox
+brew cask install macs-fan-control
 brew cask install dropbox
 brew cask install google-backup-and-sync
 brew cask install telegram
