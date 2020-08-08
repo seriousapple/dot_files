@@ -46,21 +46,23 @@ defaults write com.apple.dock mineffect -string "scale"
 defaults write com.apple.dock mru-spaces -bool false
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
 # Bottom left screen corner -> Lock Screen
 defaults write com.apple.dock wvous-bl-corner -int 13
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner -> Show Desktop
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 4
 
 
 ### MOUSE
 
 
+# Mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# Normal scroll diraction
+# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 
 ### KEYBOARD
@@ -133,7 +135,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+# defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
