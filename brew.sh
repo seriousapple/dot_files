@@ -5,7 +5,6 @@ brew install vim
 
 # casks
 brew cask install google-chrome
-brew cask install firefox
 brew cask install macs-fan-control
 brew cask install dropbox
 brew cask install google-backup-and-sync
@@ -21,3 +20,4 @@ brew cask install appcleaner
 brew cask install tor-browser
 brew cask install transmission
 brew cask install notion
+brew cask install karabiner-elements
