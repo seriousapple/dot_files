@@ -9,9 +9,9 @@ purple=$(tput setaf 5);
 
 # prompt
 PS1="\[${purple}\]\w\n"; # path
-PS1+="\[${cyan}\]\h"; # host
+PS1+="\[${cyan}\]\u"; # host
 PS1+="\[${white}\]@"; # @
-PS1+="\[${yellow}\]\u"; # user 
+PS1+="\[${yellow}\]\h"; # user 
 PS1+="\[${white}\]$ "; # $
 PS1+="\[$(tput sgr0)\]" # end
 
