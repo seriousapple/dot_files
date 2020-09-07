@@ -1,6 +1,7 @@
 # main
 brew install python
 brew install vim
+brew install htop
 
 # casks
 brew cask install google-chrome
