@@ -27,6 +27,7 @@ colorscheme gruvbox
 set background=dark
 
 " ---- Keymaps ----
+map <C-k> :Lex<CR>
 
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
