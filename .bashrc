@@ -22,4 +22,8 @@ PS1+="\[${yellow}\]\h"; # user
 PS1+="\[${white}\]$ "; # $
 PS1+="\[$(tput sgr0)\]" # end
 
+# aliases
+# alias ls='ls -G'
+# alias ls='ls --color'
+
 export PS1;
