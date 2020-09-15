@@ -25,5 +25,6 @@ PS1+="\[$(tput sgr0)\]" # end
 # aliases
 # alias ls='ls -G'
 # alias ls='ls --color'
+alias ls='ls -al'
 
 export PS1;
