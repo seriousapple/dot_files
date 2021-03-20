@@ -2,21 +2,23 @@
 brew install python
 brew install vim
 brew install htop
+brew install ranger
 
 # casks
-brew cask install google-chrome
-brew cask install macs-fan-control
-brew cask install dropbox
-brew cask install telegram
-brew cask install thunderbird
-brew cask install the-unarchiver
-brew cask install vlc
-brew cask install simplenote
-brew cask install spotify
-brew cask install spectacle
-brew cask install itsycal
-brew cask install appcleaner
-brew cask install tor-browser
-brew cask install transmission
-brew cask install notion
-brew cask install karabiner-elements
+brew install eloston-chromium
+brew install macs-fan-control
+brew install dropbox
+brew install telegram
+brew install thunderbird
+brew install obsidian
+
+brew install vlc
+brew install homebrew/cask/mpv
+brew install spotify
+
+brew install the-unarchiver
+brew install itsycal
+brew install appcleaner
+brew install tor-browser
+brew install transmission
+brew install karabiner-elements

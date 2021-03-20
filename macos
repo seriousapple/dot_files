@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 
 ### SYSTEM
@@ -53,7 +54,7 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
 # Bottom left screen corner -> Lock Screen
 defaults write com.apple.dock wvous-bl-corner -int 13
-defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 1048576
 # Bottom right screen corner -> Show Desktop
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0

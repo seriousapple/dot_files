@@ -23,8 +23,10 @@ PS1+="\[${white}\]$ "; # $
 PS1+="\[$(tput sgr0)\]" # end
 
 # aliases
-# alias ls='ls -G'
+ alias ls='ls -G'
 # alias ls='ls --color'
-alias ls='ls -al'
+alias la='ls -al'
+alias tmuxa='tmux attach-session -t'
+alias ytmp4='youtube-dl -f mp4'
 
 export PS1;

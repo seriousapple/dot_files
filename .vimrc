@@ -4,6 +4,7 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 set smartindent
 set backspace=indent,eol,start
 " line nums
@@ -13,7 +14,10 @@ set colorcolumn=79
 " backup
 set noswapfile
 set nobackup
+" search
 set incsearch
+set ic
+set hls is
 " status bar
 set showcmd
 set ruler
@@ -22,12 +26,18 @@ set laststatus=2
 set clipboard=unnamed
 " autocomplition
 set wildmenu
+" highlight curren line
+"set cursorcolumn
+"set cursorline
+set scrolloff=8 "stop at 8 lines before end when scrolling
 
 colorscheme gruvbox
 set background=dark
+set t_Co=256
 
 " ---- Keymaps ----
-map <C-k> :Lex<CR>
+map <C-n> :Lex<CR>
+map <C-b> :vertical resize 20<CR>
 
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
