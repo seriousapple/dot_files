@@ -39,10 +39,10 @@ set t_Co=256
 map <C-n> :Lex<CR>
 map <C-b> :vertical resize 20<CR>
 
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+"nnoremap <Up> :resize +2<CR>
+"nnoremap <Down> :resize -2<CR>
+"nnoremap <Left> :vertical resize +2<CR>
+"nnoremap <Right> :vertical resize -2<CR>
 
 "inoremap " ""<left>
 "inoremap ' ''<left>
