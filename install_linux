@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+#remove existing files
+rm -rf ~/.config ~/.vimrc ~/.vim ~/.bashrc ~/.bash_profile
+
+#vim
+ln -s ~/dot_files/.vimrc ~/.vimrc
+ln -s ~/dot_files/.vim ~/.vim
+
+#bash
+ln -s ~/dot_files/.bashrc ~/.bashrc
+ln -s ~/dot_files/.bash_profile ~/.bash_profile
+
+#zsh
+
+#.config
+ln -s ~/dot_files/.config ~/.config
