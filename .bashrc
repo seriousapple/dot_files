@@ -27,6 +27,6 @@ PS1+="\[$(tput sgr0)\]" # end
 # alias ls='ls --color' # ls color for linux
 alias la='ls -al'
 alias tmuxa='tmux attach-session -t'
-alias ytmp4='youtube-dl -f mp4'
+alias y4='youtube-dl -f mp4'
 
 export PS1;
