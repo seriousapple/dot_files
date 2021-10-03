@@ -30,3 +30,4 @@ alias tmuxa='tmux attach-session -t'
 alias y4='youtube-dl -f mp4'
 
 export PS1;
+export BASH_SILENCE_DEPRECATION_WARNING=1;

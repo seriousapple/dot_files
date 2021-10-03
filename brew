@@ -9,7 +9,6 @@ brew install eloston-chromium
 brew install macs-fan-control
 brew install dropbox
 brew install telegram
-brew install thunderbird
 brew install obsidian
 
 brew install vlc
