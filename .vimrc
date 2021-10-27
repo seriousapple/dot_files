@@ -23,7 +23,8 @@ set showcmd
 set ruler
 set laststatus=2
 " use system clipboard
-set clipboard=unnamed
+" set clipboard=unnamed "for mac
+set clipboard=unnamedplus "for linux
 " autocomplition
 set wildmenu
 " highlight curren line
@@ -34,6 +35,7 @@ set scrolloff=8 "stop at 8 lines before end when scrolling
 colorscheme gruvbox
 set background=dark
 set t_Co=256
+set t_ut=
 
 " ---- Keymaps ----
 map <C-n> :Lex<CR>

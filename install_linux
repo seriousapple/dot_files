@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
 #remove existing files
-rm -rf ~/.config ~/.vimrc ~/.vim ~/.bashrc ~/.bash_profile
+rm -rf ~/.vimrc ~/.vim ~/.bashrc ~/.bash_profile
+rm -rf ~/.config/htop
+rm -rf ~/.config/mpv
+rm -rf ~/.config/ranger
+rm -rf ~/.config/i3
+rm -rf ~/.config/polybar
+rm -rf ~/.config/fcitx
 
 #vim
 ln -s ~/dot_files/.vimrc ~/.vimrc
@@ -14,4 +20,10 @@ ln -s ~/dot_files/.bash_profile ~/.bash_profile
 #zsh
 
 #.config
-ln -s ~/dot_files/.config ~/.config
+ln -s ~/dot_files/.config/htop ~/.config/htop
+ln -s ~/dot_files/.config/mpv ~/.config/mpv
+ln -s ~/dot_files/.config/ranger ~/.config/ranger
+ln -s ~/dot_files/.config/i3 ~/.config/i3
+ln -s ~/dot_files/.config/polybar ~/.config/polybar
+ln -s ~/dot_files/.config/fcitx ~/.config/fcitx
+
