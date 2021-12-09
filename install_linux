@@ -10,20 +10,20 @@ rm -rf ~/.config/polybar
 rm -rf ~/.config/fcitx
 
 #vim
-ln -s ~/dot_files/.vimrc ~/.vimrc
+ln -s ~/00files/dot_files/.vimrc ~/.vimrc
 ln -s ~/dot_files/.vim ~/.vim
 
 #bash
-ln -s ~/dot_files/.bashrc ~/.bashrc
-ln -s ~/dot_files/.bash_profile ~/.bash_profile
+ln -s ~/00files/dot_files/.bashrc ~/.bashrc
+ln -s ~/00files/dot_files/.bash_profile ~/.bash_profile
 
 #zsh
 
 #.config
-ln -s ~/dot_files/.config/htop ~/.config/htop
-ln -s ~/dot_files/.config/mpv ~/.config/mpv
-ln -s ~/dot_files/.config/ranger ~/.config/ranger
-ln -s ~/dot_files/.config/i3 ~/.config/i3
-ln -s ~/dot_files/.config/polybar ~/.config/polybar
-ln -s ~/dot_files/.config/fcitx ~/.config/fcitx
+ln -s ~/00files/dot_files/.config/htop ~/.config/htop
+ln -s ~/00files/dot_files/.config/mpv ~/.config/mpv
+ln -s ~/00files/dot_files/.config/ranger ~/.config/ranger
+ln -s ~/00files/dot_files/.config/i3 ~/.config/i3
+ln -s ~/00files/dot_files/.config/polybar ~/.config/polybar
+ln -s ~/00files/dot_files/.config/fcitx ~/.config/fcitx
 
