@@ -1,23 +1,87 @@
-# main
-brew install python
-brew install vim
-brew install htop
-brew install ranger
+#!/bin/bash
 
-# casks
-brew install eloston-chromium
-brew install macs-fan-control
-brew install dropbox
-brew install telegram
-brew install obsidian
+# terminal
+term=(
+python
+vim
+htop
+ranger
+)
 
-brew install vlc
-brew install homebrew/cask/mpv
-brew install spotify
+# terminal utility
+termutil=(
+imagemagick
+ffmpeg
+)
 
-brew install the-unarchiver
-brew install itsycal
-brew install appcleaner
-brew install tor-browser
-brew install transmission
-brew install karabiner-elements
+# essential
+ess=(
+#eloston-chromium
+stats
+dropbox
+nextcloud
+telegram
+obsidian
+vlc
+homebrew/cask/mpv
+spotify
+transmission
+)
+
+# utility
+util=(
+the-unarchiver
+appcleaner
+rectangle
+raycast
+amorphousdiskmark
+dozer
+balenaetcher
+mullvadvpn
+)
+
+# extra
+extra=(
+tor-browser
+libreoffice
+virtualbox
+)
+
+echo "what to install"
+select choice in all all-no-extra term+ess utils termutils extra quit
+do 
+    echo "selected is $choice"
+    case $choice in 
+        all)
+            brew install ${term[@]} ${termutils[@]} ${ess[@]} ${util[@]} ${extra[@]}
+            break
+            ;;
+        all-no-extra)
+            brew install ${term[@]} ${termutils[@]} ${ess[@]} ${util[@]}
+            break
+            ;;
+        term+ess)
+            brew install ${term[@]} ${ess[@]}
+            break
+            ;;
+        utils)
+            brew install ${utils[@]}
+            break
+            ;;
+        termutils)
+            brew install ${termutils[@]}
+            break
+            ;;
+        extra)
+            brew install ${extra[@]}
+            break
+            ;;
+        quit)
+            break
+            ;;
+        *)
+            echo "invalid"
+            ;;
+    esac
+done
+
