@@ -27,3 +27,10 @@ ln -s ~/00files/dot_files/.config/i3 ~/.config/i3
 ln -s ~/00files/dot_files/.config/polybar ~/.config/polybar
 ln -s ~/00files/dot_files/.config/fcitx ~/.config/fcitx
 
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "update git user and email"
+

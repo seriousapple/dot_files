@@ -19,3 +19,10 @@ ln -s ~/00files/dot_files/.config ~/.config
 ./formac/brew
 ./formac/browser
 ./formac/macos
+
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "update git user and email"
