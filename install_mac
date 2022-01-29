@@ -16,5 +16,6 @@ ln -s ~/00files/dot_files/.bash_profile ~/.bash_profile
 #.config
 ln -s ~/00files/dot_files/.config ~/.config
 
-./brew
-./macos
+./formac/brew
+./formac/browser
+./formac/macos
