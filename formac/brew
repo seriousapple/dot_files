@@ -12,6 +12,7 @@ ranger
 termutil=(
 imagemagick
 ffmpeg
+youtube-dl
 )
 
 # essential
