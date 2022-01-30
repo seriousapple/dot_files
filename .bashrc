@@ -39,3 +39,6 @@ alias vpb='vim ~/.config/polybar/config.ini'
 
 export PS1;
 export BASH_SILENCE_DEPRECATION_WARNING=1;
+
+#scripts dir
+export PATH=$PATH:~/00files/dot_files/scripts

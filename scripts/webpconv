@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -d "done" ]; then
+  mkdir -p "done";
+fi
+for f in *.webp; do magick "$f" "done/${f}.jpg"; done

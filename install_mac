@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #remove existing files
-rm -rf ~/.config ~/.vimrc ~/.vim ~/.bashrc ~/.bash_profile
+rm -rf ~/.config ~/.vimrc ~/.vim ~/.bashrc ~/.bash_profile ~/.scripts
 
 #vim
 ln -s ~/00files/dot_files/.vimrc ~/.vimrc

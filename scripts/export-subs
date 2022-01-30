@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ ! -d "00sub-export" ]; then
+  mkdir -p "00sub-export";
+fi
+rsync -a --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' . 00sub-export

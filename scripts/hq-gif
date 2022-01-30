@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ ! -d "done" ]; then
+  mkdir -p "done";
+fi
+for f in *.{mp4,MP4,mov,MOV,avi,AVI,webm,WEBM,mkv,MKV,3gp,mts,mpg}; do ffmpeg -i "$f" -vf "split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "done/${f%.*}.gif"; done
+
