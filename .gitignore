@@ -1,3 +1,4 @@
 .DS_Store
 .config/mpv/watch_later
 .config/.DS_Store
+zsh-plugins/*

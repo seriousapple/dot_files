@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #remove existing files
-rm -rf ~/.config ~/.vimrc ~/.vim ~/.bashrc ~/.bash_profile ~/.scripts
+rm -rf ~/.config ~/.vimrc ~/.vim ~/.bashrc ~/.zshrc ~/.bash_profile ~/.scripts
 
 #vim
 ln -s ~/00files/dot_files/.vimrc ~/.vimrc
@@ -12,6 +12,7 @@ ln -s ~/00files/dot_files/.bashrc ~/.bashrc
 ln -s ~/00files/dot_files/.bash_profile ~/.bash_profile
 
 #zsh
+ln -s ~/00files/dot_files/.zshrc ~/.zshrc
 
 #.config
 ln -s ~/00files/dot_files/.config ~/.config
@@ -19,6 +20,9 @@ ln -s ~/00files/dot_files/.config ~/.config
 ./formac/brew
 ./formac/browser
 ./formac/macos
+
+#zsh plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting zsh-plugins/
 
 echo "*********************************"
 echo "*********************************"
