@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ### SYSTEM
 
 
@@ -11,6 +10,8 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 sudo spctl --master-disable
 
 # Disable local Time Machine
+#sudo tmutil disablelocal
+
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
@@ -19,7 +20,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
+#sudo systemsetup -setrestartfreeze on
 
 # Sleep the display after 10 minutes
 sudo pmset -a displaysleep 10

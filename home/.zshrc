@@ -1,5 +1,4 @@
-export VISUAL=vim;
-export EDITOR=vim;
+source ~/00files/dot_files/aliases
 
 #plugins
 source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -55,31 +54,3 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# aliases
-alias la='ls -alh'
-alias tmuxa='tmux attach-session -t'
-alias y4='youtube-dl -f mp4'
-
-# OS specific
-case "$(uname -s)" in
-    
-    Darwin)
-        alias ls='ls -G' # ls color for macos
-        alias zss='vim ~/.zshrc'
-
-        ;;
-    Linux)
-        alias ls='ls --color' # ls color for linux
-        alias pcmi='sudo pacman -Sy'
-        alias pcms='sudo pacman -Ss'
-        alias vi3='vim ~/.config/i3/config'
-        alias vpb='vim ~/.config/polybar/config.ini'
-
-        ;;
-    *)
-        #other os
-        ;;
-esac
-
-#scripts dir
-export PATH=$PATH:~/00files/dot_files/scripts

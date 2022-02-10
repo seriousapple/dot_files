@@ -5,28 +5,30 @@ select browser in eloston marmaduke firefox brave quit
 do
     echo "selected is $browser"
     case $browser in 
-    eloston)
-        brew install eloston-chromium
-        break
-        ;;
-    marmadukee)
-        brew tap mtslzr/marmaduke-chromium
-        brew update
-        brew install marmaduke-chromium-ungoogled
-        break
-        ;;
-    firefox)
-        brew install firefox
-        break
-        ;;
-    brave)
-        brew install brave
-        break
-        ;;
-    quit)
-        break
-        ;;
-    *)
-        echo "invalid"
-        ;;
+        eloston)
+            brew install eloston-chromium
+            break
+            ;;
+        marmadukee)
+            brew tap mtslzr/marmaduke-chromium
+            brew update
+            brew install marmaduke-chromium-ungoogled
+            break
+            ;;
+        firefox)
+            brew install firefox
+            break
+            ;;
+        brave)
+            brew install brave
+            break
+            ;;
+        quit)
+            break
+            ;;
+        *)
+            echo "invalid"
+            ;;
     esac
+done
+

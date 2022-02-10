@@ -6,10 +6,6 @@ python
 vim
 htop
 ranger
-)
-
-# terminal utility
-termutil=(
 imagemagick
 ffmpeg
 youtube-dl
@@ -17,7 +13,7 @@ youtube-dl
 
 # essential
 ess=(
-#eloston-chromium
+kitty
 stats
 dropbox
 nextcloud
@@ -27,10 +23,7 @@ vlc
 homebrew/cask/mpv
 spotify
 transmission
-)
-
-# utility
-util=(
+#utils
 the-unarchiver
 appcleaner
 rectangle
@@ -49,28 +42,20 @@ virtualbox
 )
 
 echo "what to install"
-select choice in all all-no-extra term+ess utils termutils extra quit
+select choice in all all-no-extra term extra quit
 do 
     echo "selected is $choice"
     case $choice in 
         all)
-            brew install ${term[@]} ${termutils[@]} ${ess[@]} ${util[@]} ${extra[@]}
+            brew install ${term[@]} ${ess[@]} ${extra[@]}
             break
             ;;
         all-no-extra)
-            brew install ${term[@]} ${termutils[@]} ${ess[@]} ${util[@]}
-            break
-            ;;
-        term+ess)
             brew install ${term[@]} ${ess[@]}
             break
             ;;
-        utils)
-            brew install ${utils[@]}
-            break
-            ;;
-        termutils)
-            brew install ${termutils[@]}
+        term)
+            brew install ${term[@]}
             break
             ;;
         extra)

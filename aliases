@@ -1,0 +1,46 @@
+#!/bin/bash
+
+export VISUAL=vim;
+export EDITOR=vim;
+
+# aliases
+alias la='ls -alh'
+alias tmuxa='tmux attach-session -t'
+alias y4='youtube-dl --add-metadata -f mp4 -c' #video in mp4
+alias yta='youtube-dl --add-metadata -xc' #audio only
+
+case "$TERM" in
+    xterm-kitty)
+        alias ssh="kitty +kitten ssh"
+
+        ;;
+    *)
+        #other terminal
+        ;;
+esac
+
+# OS specific
+case "$(uname -s)" in
+    
+    Darwin)
+        alias ls='ls -G' # ls color for macos
+        alias vzs='vim ~/.zshrc'
+        alias vbs='vim ~/.bashrc'
+
+        ;;
+    Linux)
+        alias ls='ls --color' # ls color for linux
+        alias pcmi='sudo pacman -Sy'
+        alias pcms='sudo pacman -Ss'
+        alias vi3='vim ~/.config/i3/config'
+        alias vpb='vim ~/.config/polybar/config.ini'
+
+        ;;
+    *)
+        #other os
+        ;;
+esac
+
+#scripts dir
+export PATH=$PATH:~/00files/dot_files/scripts
+

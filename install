@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+
+case "$(uname -s)" in
+    
+    Darwin)
+        #remove configs
+        rm -rf ~/.config/*
+
+        #make symbolic link for configs
+        ln -s ~/00files/dot_files/config/karabiner ~/.config/karabiner
+
+        #install apps    
+        ./formac/macos
+        ./formac/mac-browser
+        ./formac/brew
+
+        ;;
+    Linux)
+        #remove configs 
+        rm -rf ~/.config/i3
+        rm -rf ~/.config/polybar
+        rm -rf ~/.config/fcitx
+        
+        #make symbolic link for configs
+
+        ln -s ~/00files/dot_files/config/i3 ~/.config/i3
+        ln -s ~/00files/dot_files/config/polybar ~/.config/polybar
+        ln -s ~/00files/dot_files/config/fcitx ~/.config/fcitx
+
+        ;;
+    *)
+        #other os
+        ;;
+esac
+
+#remove configs
+rm -rf ~/.vimrc ~/.vim ~/.bashrc ~/.zshrc ~/.bash_profile
+
+#make symbolic links
+
+ln -s ~/00files/dot_files/config/htop ~/.config/htop
+ln -s ~/00files/dot_files/config/mpv ~/.config/mpv
+ln -s ~/00files/dot_files/config/ranger ~/.config/ranger
+ln -s ~/00files/dot_files/config/kitty ~/.config/kitty
+
+#vim
+ln -s ~/00files/dot_files/home/.vimrc ~/.vimrc
+ln -s ~/00files/dot_files/home/.vim ~/.vim
+
+#bash
+ln -s ~/00files/dot_files/home/.bashrc ~/.bashrc
+ln -s ~/00files/dot_files/home/.bash_profile ~/.bash_profile
+
+#zsh
+ln -s ~/00files/dot_files/home/.zshrc ~/.zshrc
+
+if [ ! -d "${HOME}/.cache/zsh" ]; then
+  mkdir -p "${HOME}/.cache/zsh";
+fi
+
+if [ ! -d "${HOME}/.cache/zsh/history" ]; then
+  touch "${HOME}/.cache/zsh/history";
+fi
+
+
+#zsh plugins
+if [ ! -d "zsh-plugins" ]; then
+  mkdir -p "zsh-plugins";
+fi
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting zsh-plugins/
+
+#other
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "*********************************"
+echo "update git user and email"
