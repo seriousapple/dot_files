@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# SSH
+if [[ "${SSH_TTY}" ]]; then
+    hostStyle=$(tput setaf 1);
+    hostStyleZ={red};
+else
+    hostStyle=$(tput setaf 6);
+    hostStyleZ={cyan};
+fi;
+

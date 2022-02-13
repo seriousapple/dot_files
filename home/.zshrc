@@ -1,4 +1,5 @@
 source ~/00files/dot_files/aliases
+source ~/00files/dot_files/ssh-ps1
 
 #plugins
 source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -10,7 +11,7 @@ HISTSIZE=10000
 HISTFILE="$XDG_DATA_HOME"~/.cache/zsh/history
 
 #PS1 colors and layout
-PROMPT="%F{magenta}%~%f"$'\n'"%F{cyan}%n%f@%F{yellow}%m%f%# "
+PROMPT="%F{magenta}%~%f"$'\n'"%F$hostStyleZ%n%f@%F{yellow}%m%f%# "
 RPROMPT="%*"
 
 setopt extended_glob nomatch auto_cd

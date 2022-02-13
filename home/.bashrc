@@ -1,29 +1,14 @@
 source ~/00files/dot_files/aliases
-
-# colors
-bold=$(tput bold);
-black=$(tput setaf 0);
-white=$(tput setaf 15);
-cyan=$(tput setaf 6);
-yellow=$(tput setaf 11);
-red=$(tput setaf 1);
-purple=$(tput setaf 5);
-
-# SSH
-if [[ "${SSH_TTY}" ]]; then
-    hostStyle="${bold}${red}";
-else
-    hostStyle="${cyan}";
-fi;
+source ~/00files/dot_files/ssh-ps1
 
 # prompt
-PS1="\[${purple}\]\w\n"; # path
+PS1="\[$(tput setaf 5)\]\w\n"; # path
 PS1+="\[${hostStyle}\]\u"; # host
-PS1+="\[${white}\]@"; # @
-PS1+="\[${yellow}\]\h"; # user 
-PS1+="\[${white}\]$ "; # $
+PS1+="\[$(tput setaf 15)\]@"; # @
+PS1+="\[$(tput setaf 11)\]\h"; # user 
+PS1+="\[$(tput setaf 15)\]$ "; # $
 PS1+="\[$(tput sgr0)\]" # end
 
 export PS1;
-export BASH_SILENCE_DEPRECATION_WARNING=1;
+export BASH_SILENCE_DEPRECATION_WARNING=1; #macos only
 
