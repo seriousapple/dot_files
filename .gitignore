@@ -3,3 +3,4 @@
 .config/.DS_Store
 zsh-plugins/*
 config/polybar/scripts/*
+local-aliases

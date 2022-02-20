@@ -9,6 +9,8 @@ alias tmuxa='tmux attach-session -t'
 alias y4='youtube-dl --add-metadata -f mp4 -c' #video in mp4
 alias yta='youtube-dl --add-metadata -xc' #audio only
 
+alias vloa='vim ~/00files/dot_files/local-aliases'
+
 case "$TERM" in
     xterm-kitty)
         alias ssh="kitty +kitten ssh"
