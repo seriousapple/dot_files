@@ -28,8 +28,8 @@ set ruler
 set laststatus=2
 
 " use system clipboard
- set clipboard=unnamed "for mac
-" set clipboard=unnamedplus "for linux
+" set clipboard=unnamed "for mac
+ set clipboard=unnamedplus "for linux
 
 " autocomplition
 set wildmenu
