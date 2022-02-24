@@ -78,7 +78,7 @@ bindsym $mod+i layout tabbed
 bindsym $mod+u layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Ctrl+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -180,7 +180,7 @@ exec xrandr --output DVI-D-1 --rotate right
 exec fcitx -d #japanese ime
 
 #background image
-exec_always feh --bg-fill ~/Dropbox/shared/backgrounds/pc/photos/0345-0KZM7MEtJhk.jpg
+exec_always feh --bg-fill ~/NCED/09-other/backgrounds/pc/photos/0345-0KZM7MEtJhk.jpg
 
 #tray icons
 exec_always blueman-applet
@@ -197,6 +197,7 @@ for_window [instance="pavucontrol"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="Origin"] floating enable
 for_window [instance="nemo"] floating enable
+for_window [instance="telegram-desktop"] floating enable
 
 for_window [instance="feh"] floating enable
 for_window [instance="sxiv"] floating enable
