@@ -1,1 +1,50 @@
-i3 i3-gaps kitty ranger vim gvim git firefox blueman volumeicon fcitx fcitx-mozc feh lxappearence dropbox gucharmap nm-applet pavucontrol pcmanfm 
+# main
+kitty 
+ranger 
+python3
+python-pip
+gvim 
+git 
+chromium 
+
+zathura
+zathura-pdf-mupdf
+mpv
+feh 
+sxiv
+dropbox 
+nextcloud-client
+obsidian
+telegram-desktop
+nemo
+
+#aur
+all-repository-fonts
+
+# i3
+i3-wm 
+i3-gaps 
+rofi
+polybar
+lightdm
+lightdm-gtk-greeter
+blueman 
+volumeicon 
+network-manager-applet
+
+#japanese
+adobe-source-han-sans-jp-fonts 
+ibus-anthy
+
+fcitx 
+fcitx-mozc 
+fcitx-configtool
+
+# arch
+mesa
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pavucontrol 
+bluez
+
