@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd "$1"
-
-morph=$(awk -F "\t" '{ total += $4 } END { print int(total/NR) }' /Users/srs-apl/Library/Application\ Support/Anki2/User\ 1/dbs/readability_log.txt)
-known=$(awk -F "\t" '{ total += $9 } END { print int(total/NR) }' /Users/srs-apl/Library/Application\ Support/Anki2/User\ 1/dbs/readability_log.txt) 
-
-echo > $morph-$known.txt

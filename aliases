@@ -6,8 +6,8 @@ export EDITOR=vim;
 # aliases
 alias la='ls -alh'
 alias tmuxa='tmux attach-session -t'
-alias y4='youtube-dl --add-metadata -f mp4 -c' #video in mp4
-alias yta='youtube-dl --add-metadata -xc' #audio only
+alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
+alias yta='yt-dlp --add-metadata -xc' #audio only
 
 alias vloa='vim ~/00files/dot_files/local-aliases'
 

@@ -7,9 +7,9 @@ source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highli
 source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 #history
-SAVEHIST=10000
-HISTSIZE=10000
-HISTFILE="$XDG_DATA_HOME"~/.cache/zsh/history
+#SAVEHIST=10000
+#HISTSIZE=10000
+#HISTFILE="$XDG_DATA_HOME"~/.cache/zsh/history
 
 #PS1 colors and layout
 PROMPT="%F{magenta}%~%f"$'\n'"%F$hostStyleZ%n%f@%F{yellow}%m%f%# "

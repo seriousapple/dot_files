@@ -1,6 +1,6 @@
 .DS_Store
-.config/mpv/watch_later
-.config/.DS_Store
+config/mpv/watch_later
+config/.DS_Store
 zsh-plugins/*
 config/polybar/scripts/*
 local-aliases
