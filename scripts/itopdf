@@ -1,0 +1,3 @@
+#!/bin/bash
+
+convert *.jpg -density 600 -colorspace sRGB ../"$(pwd | grep -o '[^/]*$')".pdf

@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -d "done" ]; then
+  mkdir -p "done";
+fi
+for f in *.{mkv,MKV}; do ffmpeg -i "$f" -map 0:v:0 -map 0:a:1 -vcodec copy -acodec aac -strict -2 -ab 320K "done/${f%.*}.mkv"; done

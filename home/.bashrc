@@ -2,6 +2,8 @@ source ~/00files/dot_files/aliases
 source ~/00files/dot_files/ssh-ps1
 source ~/00filse/dot_files/local-aliases
 
+HISTTIMEFORMAT="%Y-%m-%d %T "
+
 # prompt
 PS1="\[$(tput setaf 5)\]\w\n"; # path
 PS1+="\[${hostStyle}\]\u"; # host
