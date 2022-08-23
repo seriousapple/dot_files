@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -d "done" ]; then
+  mkdir -p "done";
+fi
+for f in *.{mp4,MP4,mov,MOV,avi,AVI,webm,WEBM,mkv,MKV,3gp,mts,mpg}; do ffmpeg -i "$f" -c:v libx265 -vtag hvc1 -crf 21 -map 0:v:0 -map 0:a:1 "done/${f%.*}.mkv"; done

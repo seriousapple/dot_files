@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -d "done" ]; then
+  mkdir -p "done";
+fi
+for f in *.flac; do ffmpeg -i "$f" -c:a alac "done/${f%.*}.m4a"; done

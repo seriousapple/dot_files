@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rsync -aP --delete ~/Dropbox/ /Volumes/4tb-exfat/00-backup/DBX/
+rsync -aP --delete ~/NCED/ /Volumes/4tb-exfat/00-backup/NCED/
+rsync -aP --delete ~/00files/keepassxc/ /Volumes/4tb-exfat/00-backup/keepassxc/
+rsync -aP --delete ~/00files/dot_files/ /Volumes/4tb-exfat/00-backup/dot_files/
