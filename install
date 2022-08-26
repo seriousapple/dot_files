@@ -7,7 +7,7 @@ case "$(uname -s)" in
         rm -rf ~/.config/*
 
         #make symbolic link for configs
-        ln -s ~/00files/dot_files/config/karabiner ~/.config/karabiner
+#        ln -s ~/00files/dot_files/config/karabiner ~/.config/karabiner
 
         #install apps    
         ./formac/macos
