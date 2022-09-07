@@ -1,6 +1,6 @@
 source ~/00files/dot_files/aliases
 source ~/00files/dot_files/ssh-ps1
-source ~/00filse/dot_files/local-aliases
+source ~/00files/dot_files/local-aliases
 
 HISTTIMEFORMAT="%Y-%m-%d %T "
 
