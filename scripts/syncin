@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rclone sync dbx: ~/00files/Dropbox
-rclone sync nced: ~/00files/NCED
+rclone sync -v dbx: ~/00files/Dropbox
+rclone sync -v nced: ~/00files/NCED
