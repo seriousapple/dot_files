@@ -4,6 +4,7 @@ export VISUAL=vim;
 export EDITOR=vim;
 
 # aliases
+alias q='exit'
 alias la='ls -alh'
 alias tmuxa='tmux attach-session -t'
 alias rn='. ranger'
@@ -15,7 +16,7 @@ alias vloa='vim ~/00files/dot_files/local-aliases'
 
 case "$TERM" in
     xterm-kitty)
-        alias ssh="kitty +kitten ssh"
+#        alias ssh="kitty +kitten ssh"
 
         ;;
     *)

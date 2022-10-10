@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rclone check dbx: ~/00files/Dropbox
+rclone check nced: ~/00files/NCED
