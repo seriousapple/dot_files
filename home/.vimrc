@@ -40,6 +40,8 @@ set wildmenu
 
 set scrolloff=8 "stop at 8 lines before end when scrolling
 
+set undodir=~/.vim/undodir"
+set undofile
 
 colorscheme gruvbox
 set background=dark
@@ -47,8 +49,18 @@ set t_Co=256
 set t_ut=
 
 " ---- Keymaps ----
-map <C-n> :Lex<CR>
-map <C-b> :vertical resize 20<CR>
+let mapleader = " " 
+
+map <Leader>n :Lex<CR>
+map <Leader>b :vertical resize 20<CR>
+
+nnoremap <Leader>1 1gt<CR>
+nnoremap <Leader>2 2gt<CR>
+nnoremap <Leader>3 3gt<CR>
+nnoremap <Leader>4 4gt<CR>
+nnoremap <Leader>5 5gt<CR>
+nnoremap <Leader>t :tabnew<CR>
+nnoremap <Leader>w :tabclose<CR>
 
 "nnoremap <Up> :resize +2<CR>
 "nnoremap <Down> :resize -2<CR>
