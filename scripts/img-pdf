@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for d in */ ; do
+    convert $d*.{png,jpg,jpeg,PNG,JPG,JPEG} -density 600 -colorspace sRGB ${d%/}.pdf
+done
+
+#(pwd | grep -o '[^/]*$')
