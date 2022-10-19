@@ -2,4 +2,4 @@
 if [ ! -d "done" ]; then
   mkdir -p "done";
 fi
-for f in *.webp; do magick "$f" "done/${f}.jpg"; done
+for f in *.webp; do convert "$f" "done/${f%.*}.jpg"; done
