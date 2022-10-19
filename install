@@ -35,7 +35,7 @@ case "$(uname -s)" in
 esac
 
 #remove configs
-rm -rf ~/.vimrc ~/.vim ~/.bashrc ~/.zshrc ~/.bash_profile
+rm -rf ~/.vimrc ~/.vim ~/.bashrc ~/.zshrc ~/.bash_profile ~/.tmux.conf
 
 #make symbolic links
 rm -rf ~/.config/htop ~/.config/mpv ~/.config/ranger ~/.config/kitty
@@ -44,6 +44,8 @@ ln -s ~/00files/dot_files/config/htop ~/.config/htop
 ln -s ~/00files/dot_files/config/mpv ~/.config/mpv
 ln -s ~/00files/dot_files/config/ranger ~/.config/ranger
 ln -s ~/00files/dot_files/config/kitty ~/.config/kitty
+
+ln -s ~/00files/dot_files/home/.tmux.conf ~/.tmux.conf
 
 #vim
 ln -s ~/00files/dot_files/home/.vimrc ~/.vimrc
