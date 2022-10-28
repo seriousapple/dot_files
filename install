@@ -60,9 +60,6 @@ ln -s ~/00files/dot_files/home/.bash_profile ~/.bash_profile
 
 #zsh
 ln -s ~/00files/dot_files/home/.zshrc ~/.zshrc
-if [ ! -d "${HOME}/00files/dot_files/local-aliases" ]; then
-    touch ~/00files/dot_files/local-aliases
-fi
 
 if [ ! -d "${HOME}/.cache/zsh" ]; then
   mkdir -p "${HOME}/.cache/zsh";

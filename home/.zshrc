@@ -1,6 +1,5 @@
 source ~/00files/dot_files/aliases
 source ~/00files/dot_files/ssh-ps1
-source ~/00files/dot_files/local-aliases
 
 #plugins
 source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
