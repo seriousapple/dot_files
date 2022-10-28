@@ -6,13 +6,13 @@ case "$(uname -s)" in
 
         rsync -aP --delete /Volumes/4tb-exfat/00-backup/DBX/ ~/00files/Dropbox/
         rsync -aP --delete /Volumes/4tb-exfat/00-backup/NCED/ ~/00files/NCED/
-#        rsync -aP --delete /Volumes/4tb-exfat/00-backup/keepassxc/ ~/00files/keepassxc/
+        rsync -aP --delete /Volumes/4tb-exfat/00-backup/local/ ~/00files/local/
         ;;
     Linux)
         dirpath="/run/user/1000/gvfs/smb-share:server=keenetic-6508.local,share"
         rsync -aP --delete $dirpath=4tb-exfat/00-backup/DBX/ ~/00files/Dropbox/
         rsync -aP --delete $dirpath=4tb-exfat/00-backup/NCED/ ~/00files/NCED/
-#        rsync -aP --delete $dirpath=4tb-exfat/00-backup/keepassxc/ ~/00files/keepassxc/
+        rsync -aP --delete $dirpath=4tb-exfat/00-backup/local/ ~/00files/local/
         ;;
     *)
         #other os

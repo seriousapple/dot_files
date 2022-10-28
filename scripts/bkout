@@ -6,13 +6,13 @@ case "$(uname -s)" in
 
         rsync -aP --delete ~/00files/Dropbox/ /Volumes/4tb-exfat/00-backup/DBX/
         rsync -aP --delete ~/00files/NCED/ /Volumes/4tb-exfat/00-backup/NCED/
-#        rsync -aP --delete ~/00files/keepassxc/ /Volumes/4tb-exfat/00-backup/keepassxc/
+        rsync -aP --delete ~/00files/local/ /Volumes/4tb-exfat/00-backup/local/
         ;;
     Linux)
         dirpath="/home/yaya/00share"
         rsync -azP --safe-links --delete /home/yaya/00files/Dropbox/ $dirpath/00-backup/DBX/
         rsync -azP --safe-links --delete /home/yaya/00files/NCED/ $dirpath/00-backup/NCED/
-#        rsync -azP --safe-links --delete /home/yaya/00files/keepassxc/ $dirpath/00-backup/keepassxc/
+        rsync -azP --safe-links --delete /home/yaya/00files/local/ $dirpath/00-backup/local/
         ;;
     *)
         #other os
