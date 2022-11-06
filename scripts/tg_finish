@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    text=finished
+else
+    text=$1
+fi
+
+curl "https://api.telegram.org/$MIYO_KEY/sendMessage?chat_id=$MCHAT_ID&text=$text"
