@@ -4,7 +4,12 @@ export VISUAL=vim;
 export EDITOR=vim;
 
 # aliases
+alias duf='xdg-open `fzf`'
+alias vuf='vim `fzf`'
+alias muf='vim `find ~/00files/NCED/md-database -type f | fzf --preview="cat {}"`'
+
 alias hist='history 0 | fzf'
+
 alias q='exit'
 alias la='ls -alh'
 alias rn='. ranger'
