@@ -62,6 +62,7 @@ ln -s ~/00files/dot_files/home/.bash_profile ~/.bash_profile
 ln -s ~/00files/dot_files/home/.zshrc ~/.zshrc
 
 if [ ! -d "${HOME}/00files/local/en-vars" ]; then
+  mkdir -p "${HOME}/00files/local";
   touch "${HOME}/00files/local/en-vars";
 fi
 
