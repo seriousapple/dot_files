@@ -1,0 +1,19 @@
+urls-source freshrss
+freshrss-url "http://10.69.0.101:8090/api/greader.php"
+freshrss-login yaya
+freshrss-passwordeval "echo $FRSSP"
+freshrss-min-items 100
+
+bind-key j next
+bind-key k prev
+bind-key J next-feed
+bind-key K prev-feed
+
+bind-key A mark-all-above-as-read
+
+refresh-on-startup yes
+
+# externel browser
+browser "xdg-open %u"
+
+highlight article "^(Title):.*$" green default

@@ -20,6 +20,8 @@ case "$(uname -s)" in
         rm -rf ~/.config/i3
         rm -rf ~/.config/polybar
         rm -rf ~/.config/fcitx
+        rm -rf ~/.config/newsboat
+        rm -rf ~/.newsboat
 
         
         #make symbolic link for configs
@@ -27,6 +29,7 @@ case "$(uname -s)" in
         ln -s ~/00files/dot_files/config/i3 ~/.config/i3
         ln -s ~/00files/dot_files/config/polybar ~/.config/polybar
         ln -s ~/00files/dot_files/config/fcitx ~/.config/fcitx
+        ln -s ~/00files/dot_files/config/newsboat ~/.config/newsboat
 
         ;;
     *)
