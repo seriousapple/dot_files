@@ -3,6 +3,7 @@ freshrss-url "http://10.69.0.101:8090/api/greader.php"
 freshrss-login yaya
 freshrss-passwordeval "echo $FRSSP"
 freshrss-min-items 100
+freshrss-flag-star "s"
 
 bind-key j next
 bind-key k prev
@@ -12,6 +13,7 @@ bind-key K prev-feed
 bind-key A mark-all-above-as-read
 
 refresh-on-startup yes
+article-sort-order date-desc
 
 # externel browser
 browser "xdg-open %u"
