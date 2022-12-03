@@ -3,34 +3,34 @@
 case "$(uname -s)" in
     
     Darwin)
-        rsync -aP --delete /Volumes/4tb-exfat/01-movies/ /Volumes/2tb-movies/01-movies/
+        rsync -aP --delete /Volumes/4tb-exfat/01-media/ /Volumes/2tb-media/01-media/
 
         rsync -aP --delete /Volumes/4tb-exfat/00-backup/ /Volumes/2tb-data/00-backup/
         rsync -aP --delete /Volumes/4tb-exfat/02-prod/ /Volumes/2tb-data/02-prod/
         rsync -aP --delete /Volumes/4tb-exfat/03-PP/ /Volumes/2tb-data/03-PP/
         rsync -aP --delete /Volumes/4tb-exfat/08-p-pc/ /Volumes/2tb-data/08-p-pc/
         rsync -aP --delete /Volumes/4tb-exfat/09-db/ /Volumes/2tb-data/09-db/
-        rsync -aP --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' /Volumes/4tb-exfat/01-movies/ /Volumes/2tb-data/01-movies/
+        rsync -aP --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' /Volumes/4tb-exfat/01-media/ /Volumes/2tb-data/01-media/
 
 #        rsync -aP --delete /Volumes/4tb-exfat/00-backup/ /Volumes/500gb-hfs/00-backup/
 #        rsync -aP --delete /Volumes/4tb-exfat/02-prod/ /Volumes/500gb-hfs/02-prod/
-#        rsync -aP --delete --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' /Volumes/4tb-exfat/01-movies/ /Volumes/500gb-hfs/01-movies/
+#        rsync -aP --delete --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' /Volumes/4tb-exfat/01-media/ /Volumes/500gb-hfs/01-media/
 
         ;;
     Linux)
         dirpath="/run/user/1000/gvfs/smb-share:server=keenetic-6508.local,share"
-        rsync -aP --delete $dirpath=4tb-exfat/01-movies/ $dirpath=2tb-movies/01-movies/
+        rsync -aP --delete $dirpath=4tb-exfat/01-media/ $dirpath=2tb-media/01-media/
 
         rsync -aP --delete $dirpath=4tb-exfat/00-backup/ $dirpath=2tb-data/00-backup/
         rsync -aP --delete $dirpath=4tb-exfat/02-prod/ $dirpath=2tb-data/02-prod/
         rsync -aP --delete $dirpath=4tb-exfat/03-PP/ $dirpath=2tb-data/03-PP/
         rsync -aP --delete $dirpath=4tb-exfat/08-p-pc/ $dirpath=2tb-data/08-p-pc/
         rsync -aP --delete $dirpath=4tb-exfat/09-db/ $dirpath=2tb-data/09-db/
-        rsync -aP --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' $dirpath=4tb-exfat/01-movies/ $dirpath=2tb-data/01-movies/
+        rsync -aP --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' $dirpath=4tb-exfat/01-media/ $dirpath=2tb-data/01-media/
 
 #        rsync -aP --delete $dirpath=4tb-exfat/00-backup/ $dirpath=500gb-hfs/00-backup/
 #        rsync -aP --delete $dirpath=4tb-exfat/02-prod/ $dirpath=500gb-hfs/02-prod/
-#        rsync -aP --delete --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' $dirpath=4tb-exfat/01-movies/ $dirpath=500gb-hfs/01-movies/
+#        rsync -aP --delete --exclude='*.mkv' --exclude='*.mp4' --exclude='*.m4v' $dirpath=4tb-exfat/01-media/ $dirpath=500gb-hfs/01-media/
         ;;
     *)
         #other os
