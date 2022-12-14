@@ -28,7 +28,6 @@ set ruler
 set laststatus=2
 
 " use system clipboard
-" set clipboard=unnamed "for mac
  set clipboard=unnamedplus "for linux
 
 " autocomplition
@@ -61,6 +60,12 @@ nnoremap <Leader>4 4gt<CR>
 nnoremap <Leader>5 5gt<CR>
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>w :tabclose<CR>
+
+nnoremap <Leader>[ :set background=light<CR>
+nnoremap <Leader>] :set background=dark<CR>
+
+"change clipboard to mac
+nnoremap <Leader>p :set clipboard=unnamed<CR> 
 
 "nnoremap <Up> :resize +2<CR>
 "nnoremap <Down> :resize -2<CR>
