@@ -1,9 +1,13 @@
 syntax on
 
 set noerrorbells
-set tabstop=4 softtabstop=4
+"tabs to spaces
+set tabstop=4 
+set softtabstop=4
 set shiftwidth=4
+"convert tabs to spaces
 set expandtab
+
 set autoindent
 set smartindent
 set backspace=indent,eol,start
@@ -19,8 +23,8 @@ set nobackup
 
 " search
 set incsearch
-set ic
-set hls is
+set ignorecase
+set hlsearch 
 
 " status bar
 set showcmd
@@ -28,14 +32,17 @@ set ruler
 set laststatus=2
 
 " use system clipboard
- set clipboard=unnamedplus "for linux
+set clipboard=unnamedplus "for linux
 
 " autocomplition
-set wildmenu
+set wildmode=list:longest,list:full
 
 " highlight curren line
 "set cursorcolumn
 "set cursorline
+
+"split position
+set splitbelow splitright
 
 set scrolloff=8 "stop at 8 lines before end when scrolling
 
@@ -52,6 +59,8 @@ let mapleader = " "
 
 map <Leader>n :Lex<CR>
 map <Leader>b :vertical resize 20<CR>
+
+nnoremap <Leader>f :%s//g<Left><Left>
 
 nnoremap <Leader>1 1gt<CR>
 nnoremap <Leader>2 2gt<CR>

@@ -18,6 +18,7 @@ alias rn='. ranger'
 
 alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
 alias y4a='yt-dlp --add-metadata -xc' #audio only
+alias y4e='yt-dlp --add-metadata --write-thumbnail bestvideo -c'
 
 alias vloa='vim ~/00files/dot_files/local-aliases'
 
