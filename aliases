@@ -8,7 +8,7 @@ export GPG_TTY=$(tty)
 # aliases
 alias duf='xdg-open `fzf`'
 alias vuf='vim `fzf`'
-alias muf='vim `find ~/00files/NCED/md-database -type f | fzf --preview="cat {}"`'
+alias muf='vim `find ~/00files/NCED/md-database -type f | fzf --preview="cat {}" --preview-window=right:50%:wrap`'
 
 alias hist='history 0 | fzf'
 
