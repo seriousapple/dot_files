@@ -62,16 +62,16 @@ map <Leader>b :vertical resize 20<CR>
 
 nnoremap <Leader>f :%s//g<Left><Left>
 
-nnoremap <Leader>1 1gt<CR>
-nnoremap <Leader>2 2gt<CR>
-nnoremap <Leader>3 3gt<CR>
-nnoremap <Leader>4 4gt<CR>
-nnoremap <Leader>5 5gt<CR>
+nnoremap <Leader>Q 1gt<CR>
+nnoremap <Leader>W 2gt<CR>
+nnoremap <Leader>E 3gt<CR>
+nnoremap <Leader>R 4gt<CR>
+nnoremap <Leader>T 5gt<CR>
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>w :tabclose<CR>
 
-nnoremap <Leader>[ :set background=light<CR>
-nnoremap <Leader>] :set background=dark<CR>
+nnoremap <Leader>, :set background=light<CR>
+nnoremap <Leader>. :set background=dark<CR>
 
 "change clipboard to mac
 nnoremap <Leader>p :set clipboard=unnamed<CR> 
@@ -80,11 +80,3 @@ nnoremap <Leader>p :set clipboard=unnamed<CR>
 "nnoremap <Down> :resize -2<CR>
 "nnoremap <Left> :vertical resize +2<CR>
 "nnoremap <Right> :vertical resize -2<CR>
-
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
