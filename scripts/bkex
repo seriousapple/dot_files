@@ -3,7 +3,10 @@
 case "$(uname -s)" in
     
     Darwin)
-        rsync -aP --delete /Volumes/4tb-exfat/01-media/ /Volumes/2tb-media/01-media/
+        rsync -aP --delete /Volumes/4tb-exfat/01-media/anime-series Volumes/2tb-media/01-media/
+        rsync -aP --delete /Volumes/4tb-exfat/01-media/anime-movies /Volumes/2tb-media/01-media/
+        rsync -aP --delete /Volumes/4tb-exfat/01-media/01-music /Volumes/2tb-media/01-media/
+        rsync -aP --delete /Volumes/4tb-exfat/01-media/series /Volumes/2tb-media/01-media/
 
         rsync -aP --delete /Volumes/4tb-exfat/00-backup/ /Volumes/2tb-data/00-backup/
         rsync -aP --delete /Volumes/4tb-exfat/02-prod/ /Volumes/2tb-data/02-prod/
