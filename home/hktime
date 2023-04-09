@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo ; TZ=Asia/Hong_Kong date -u +%H:%M
+echo ; TZ=Asia/Hong_Kong date +%H:%M
