@@ -61,6 +61,9 @@ map <Leader>n :Lex<CR>
 map <Leader>b :vertical resize 20<CR>
 
 nnoremap <Leader>f :%s//g<Left><Left>
+nnoremap <Leader>d :put =strftime('%Y-%m-%d-%H-%M')
+nnoremap <Leader>g :-1put =expand('%:P')<CR>I# <esc>$xxx:put =strftime('%Y-%m-%d-%H-%M')<CR>IDate: <esc>oSource: [LINK]()<Left>
+
 
 nnoremap <Leader>Q 1gt<CR>
 nnoremap <Leader>W 2gt<CR>
