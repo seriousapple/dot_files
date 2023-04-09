@@ -65,11 +65,6 @@ nnoremap <Leader>d :put =strftime('%Y-%m-%d-%H-%M')
 nnoremap <Leader>g :-1put =expand('%:P')<CR>I# <esc>$xxx:put =strftime('%Y-%m-%d-%H-%M')<CR>IDate: <esc>oSource: [LINK]()<Left>
 
 
-nnoremap <Leader>Q 1gt<CR>
-nnoremap <Leader>W 2gt<CR>
-nnoremap <Leader>E 3gt<CR>
-nnoremap <Leader>R 4gt<CR>
-nnoremap <Leader>T 5gt<CR>
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>w :tabclose<CR>
 
