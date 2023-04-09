@@ -57,11 +57,10 @@ set t_ut=
 " ---- Keymaps ----
 let mapleader = " " 
 
-map <Leader>n :Lex<CR>
-map <Leader>b :vertical resize 20<CR>
+map <Leader>n :Lex<CR>:vertical resize 20<CR>
 
 nnoremap <Leader>f :%s//g<Left><Left>
-nnoremap <Leader>d :put =strftime('%Y-%m-%d-%H-%M')
+nnoremap <Leader>d :put =strftime('%Y-%m-%d-%H-%M')<CR>
 nnoremap <Leader>g :-1put =expand('%:P')<CR>I# <esc>$xxx:put =strftime('%Y-%m-%d-%H-%M')<CR>IDate: <esc>oSource: [LINK]()<Left>
 
 
