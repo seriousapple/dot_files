@@ -16,6 +16,7 @@ refresh-on-startup yes
 article-sort-order date-desc
 
 # externel browser
-browser "xdg-open %u"
+browser "case \"$(uname -s)\" in Darwin) open -g -a 'Firefox' %u ;; Linux) xdg-open %u ;; *) ;; esac"
+
 
 highlight article "^(Title):.*$" green default
