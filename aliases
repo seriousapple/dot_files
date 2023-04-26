@@ -15,6 +15,7 @@ alias hist='history 0 | fzf'
 alias q='exit'
 alias la='ls -alh'
 alias rn='. ranger'
+alias nb='newsboat'
 
 alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
 alias y4a='yt-dlp --add-metadata -xc' #audio only
