@@ -3,6 +3,8 @@
 export VISUAL=vim;
 export EDITOR=vim;
 
+export LEDGER_FILE=~/00files/NCED/00-personal/01-accounting/2023.journal
+
 export GPG_TTY=$(tty)
 
 # aliases
@@ -16,6 +18,7 @@ alias q='exit'
 alias la='ls -alh'
 alias rn='. ranger'
 alias nb='newsboat'
+alias hl='hledger'
 
 alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
 alias y4a='yt-dlp --add-metadata -xc' #audio only
