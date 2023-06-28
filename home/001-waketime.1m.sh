@@ -24,7 +24,7 @@ case "$(uname -s)" in
 
         ;;
     Linux)
-        echo ; uptime | awk '{print $3 $4}' | sed 's/.$//'
+        echo ; uptime | awk '{print $3}' | sed 's/,//'
 
         ;;
     *)
