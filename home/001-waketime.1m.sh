@@ -7,13 +7,27 @@
 # <xbar.desc>Shows the time since your mac last woke up in hours:minutes</xbar.desc>
 # <xbar.image>http://i.imgur.com/jsB66g9.png</xbar.image>
 
-wake=$(
-	sysctl -a | grep 'waketime' | grep -o "\d\{10\}" ||
-	sysctl -a | grep 'boottime' | grep -o "\d\{10\}"
-);
-now=$(date +'%s');
+case "$(uname -s)" in
 
-hours=$(echo "($now - $wake)/3600" | bc)
-minutes=$(echo "(($now - $wake)/60)%60" | bc)
+    Darwin)
 
-echo "$hours:$(printf "%02d" "$minutes")h"
+        wake=$(
+            sysctl -a | grep 'waketime' | grep -o "\d\{10\}" ||
+            sysctl -a | grep 'boottime' | grep -o "\d\{10\}"
+        );
+        now=$(date +'%s');
+
+        hours=$(echo "($now - $wake)/3600" | bc)
+        minutes=$(echo "(($now - $wake)/60)%60" | bc)
+
+        echo "$hours:$(printf "%02d" "$minutes")h"
+
+        ;;
+    Linux)
+        echo ; uptime | awk '{print $3 $4}' | sed 's/.$//'
+
+        ;;
+    *)
+
+        ;;
+esac
