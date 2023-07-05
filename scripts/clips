@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -e
+workdir="$HOME/00files/NCED/00-personal/02-notes/bookmarks.txt"
+
+main() {
+    echo -e "new-bookmark\n$(cat $workdir)" > $workdir
+    thelink=$(cat $workdir | fzf)
+    
+    if [ "$thelink" == "new-bookmark" ] ; then
+        newitem ""
+    else
+        copyitem ""
+    fi
+}
+
+
+function newitem() {
+    read -p "name: " linkname 
+    toput=$(wl-paste)
+    echo "$linkname $toput" >> $workdir
+}
+
+function copyitem() {
+    neolink=$(echo $thelink | awk '{print $NF}')
+    wl-copy $neolink
+}
+
+trap cleanup EXIT INT TERM
+
+function cleanup() {
+    sed -i '1d' $workdir
+}
+
+main ""
