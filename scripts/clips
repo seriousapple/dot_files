@@ -3,6 +3,21 @@
 set -e
 workdir="$HOME/00files/NCED/00-personal/02-notes/bookmarks.txt"
 
+case "$(uname -s)" in
+    
+    Darwin)
+        upaste='pbpaste'
+        ucopy='pbcopy'
+        ;;
+    Linux)
+        upaste='wl-paste'
+        ucopy='wl-copy'
+        ;;
+    *)
+        
+        ;;
+esac
+
 main() {
     echo -e "new-bookmark\n$(cat $workdir)" > $workdir
     thelink=$(cat $workdir | fzf)
@@ -17,13 +32,13 @@ main() {
 
 function newitem() {
     read -p "name: " linkname 
-    toput=$(wl-paste)
+    toput=$($upaste)
     echo "$linkname $toput" >> $workdir
 }
 
 function copyitem() {
     neolink=$(echo $thelink | awk '{print $NF}')
-    wl-copy $neolink
+    echo $neolink | $ucopy 
 }
 
 trap cleanup EXIT INT TERM

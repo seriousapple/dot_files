@@ -61,4 +61,4 @@ esac
 #scripts dir
 export PATH=$PATH:~/00files/dot_files/scripts
 export PATH=$PATH:~/.local/bin
-
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
