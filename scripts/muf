@@ -21,11 +21,11 @@ main() {
                         if [ -n "$file_to_edit" ] ; then
                                   if [ "$file_to_edit" == "$new_file_creation_option" ] ; then
                                               read -p "Enter a new file name: " file_to_edit
-                                                      touch_create_parent "$file_to_edit".md
+                                                      touch_create_parent "$file_to_edit"
                                                           fi
                                                             rm "$new_file_creation_option"
-                                                                "$EDITOR" "$file_to_edit".md
-                                                                    main "$file_to_edit".md
+                                                                "$EDITOR" "$file_to_edit"
+                                                                    main "$file_to_edit"
                                                                         fi
                                                                             cd -
 }
