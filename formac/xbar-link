@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ln -s ~/00files/dot_files/formac/xbar/* ~/Library/Application\ Support/xbar/plugins

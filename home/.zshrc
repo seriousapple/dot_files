@@ -9,7 +9,7 @@ source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highli
 #history
 SAVEHIST=10000
 HISTSIZE=10000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/zsh/zsh_history
 
 #PS1 colors and layout
 PROMPT="%F{magenta}%~%f"$'\n'"%F$hostStyleZ%n%f@%F{yellow}%m%f%# "

@@ -4,21 +4,26 @@
 term=(
 python
 vim
+tmux
 htop
 ranger
 imagemagick
 ffmpeg
 yt-dlp
+newsboat
+hledger
+fzf
+gnu-sed
+gnupg
+wireguard-tools
+rclone
+rsync
 )
 
 # essential
 ess=(
-kitty
 stats
-dropbox
-nextcloud
 telegram
-obsidian
 vlc
 homebrew/cask/mpv
 spotify
@@ -27,11 +32,8 @@ transmission
 the-unarchiver
 appcleaner
 rectangle
-raycast
 amorphousdiskmark
-dozer
 balenaetcher
-mullvadvpn
 )
 
 # extra

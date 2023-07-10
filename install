@@ -11,7 +11,6 @@ case "$(uname -s)" in
 
         #install apps    
         ./formac/macos
-        ./formac/mac-browser
         ./formac/brew
 
         ;;
@@ -20,8 +19,7 @@ case "$(uname -s)" in
         rm -rf ~/.config/i3
         rm -rf ~/.config/polybar
         rm -rf ~/.config/fcitx
-        rm -rf ~/.config/newsboat
-        rm -rf ~/.newsboat
+        rm -rf ~/.config/kitty
 
         
         #make symbolic link for configs
@@ -29,7 +27,6 @@ case "$(uname -s)" in
         ln -s ~/00files/dot_files/config/i3 ~/.config/i3
         ln -s ~/00files/dot_files/config/polybar ~/.config/polybar
         ln -s ~/00files/dot_files/config/fcitx ~/.config/fcitx
-        ln -s ~/00files/dot_files/config/newsboat ~/.config/newsboat
 
         ;;
     *)
@@ -39,22 +36,22 @@ esac
 
 #remove configs
 rm -rf ~/.vimrc ~/.vim ~/.bashrc ~/.zshrc ~/.bash_profile ~/.tmux.conf
+rm -rf ~/.config/newsboat ~/.newsboat
 
 #make symbolic links
-rm -rf ~/.config/htop ~/.config/mpv ~/.config/ranger ~/.config/kitty
+rm -rf ~/.config/htop ~/.config/mpv ~/.config/ranger  ~/.config/tmux
 
 ln -s ~/00files/dot_files/config/htop ~/.config/htop
 ln -s ~/00files/dot_files/config/mpv ~/.config/mpv
 ln -s ~/00files/dot_files/config/ranger ~/.config/ranger
-ln -s ~/00files/dot_files/config/kitty ~/.config/kitty
-
-ln -s ~/00files/dot_files/home/.tmux.conf ~/.tmux.conf
+ln -s ~/00files/dot_files/config/tmux ~/.config/tmux
+ln -s ~/00files/dot_files/config/newsboat ~/.config/newsboat
 
 #vim
-ln -s ~/00files/dot_files/home/.vimrc ~/.vimrc
 if [ ! -d "${HOME}/.vim/undodir" ]; then
     mkdir -p ~/.vim/undodir
 fi
+ln -s ~/00files/dot_files/home/.vim/vimrc ~/.vim/vimrc
 ln -s ~/00files/dot_files/home/.vim/colors ~/.vim/colors
 
 #bash
@@ -73,8 +70,8 @@ if [ ! -d "${HOME}/.cache/zsh" ]; then
   mkdir -p "${HOME}/.cache/zsh";
 fi
 
-if [ ! -d "${HOME}/.cache/zsh/history" ]; then
-  touch "${HOME}/.cache/zsh/history";
+if [ ! -d "${HOME}/.cache/zsh/zsh_history" ]; then
+  touch "${HOME}/.cache/zsh/zsh_history";
 fi
 
 
@@ -86,6 +83,7 @@ fi
 mkdir -p ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting zsh-plugins/zsh-syntax-highlighting
 
+mkdir -p ~/.config/git
 #other
 echo "*********************************"
 echo "*********************************"
@@ -93,3 +91,4 @@ echo "*********************************"
 echo "*********************************"
 echo "*********************************"
 echo "update git user and email"
+echo "at ~/.config/git/config
