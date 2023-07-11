@@ -16,10 +16,10 @@ case "$(uname -s)" in
         ;;
     Linux)
         #remove configs 
-        rm -rf ~/.config/i3
-        rm -rf ~/.config/polybar
-        rm -rf ~/.config/fcitx
-        rm -rf ~/.config/kitty
+        rm -rf ~/.config/i3 \
+        ~/.config/polybar \
+        ~/.config/fcitx \
+        ~/.config/kitty \
 
         
         #make symbolic link for configs
@@ -35,11 +35,24 @@ case "$(uname -s)" in
 esac
 
 #remove configs
-rm -rf ~/.vimrc ~/.vim ~/.bashrc ~/.zshrc ~/.bash_profile ~/.tmux.conf
+rm -rf ~/.vimrc \
+~/.vim \
+~/.viminfo \
+~/.bashrc \
+~/.bash_profile \
+~/.bash_history \
+~/.tmux.conf \
+~/.zshrc \
+~/.zcompdump \
+~/.zsh_history \
+
 rm -rf ~/.config/newsboat ~/.newsboat
 
 #make symbolic links
-rm -rf ~/.config/htop ~/.config/mpv ~/.config/ranger  ~/.config/tmux
+rm -rf ~/.config/htop \
+~/.config/mpv \
+~/.config/ranger \
+~/.config/tmux \
 
 ln -s ~/00files/dot_files/config/htop ~/.config/htop
 ln -s ~/00files/dot_files/config/mpv ~/.config/mpv
