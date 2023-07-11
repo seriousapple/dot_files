@@ -7,9 +7,19 @@ source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highli
 source ~/00files/dot_files/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 #history
+if [ ! -d "${HOME}/.cache/zsh" ]; then
+  mkdir -p "${HOME}/.cache/zsh";
+fi
+
+if [ ! -d "${HOME}/.cache/zsh/zsh_history" ]; then
+  touch "${HOME}/.cache/zsh/zsh_history";
+fi
+
 SAVEHIST=10000
-HISTSIZE=10000
+HISTSIZE=20000
 HISTFILE=~/.cache/zsh/zsh_history
+
+#config location
 
 #PS1 colors and layout
 PROMPT="%F{magenta}%~%f"$'\n'"%F$hostStyleZ%n%f@%F{yellow}%m%f%# "
@@ -19,9 +29,9 @@ setopt extended_glob nomatch auto_cd
 
 #tab autocomplit
 autoload -U compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select cache-path ~/.cache/zsh/zcompcache 
 zmodload zsh/complist
-compinit
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
 #vi mode

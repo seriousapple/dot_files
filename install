@@ -66,15 +66,6 @@ if [ ! -d "${HOME}/00files/local/en-vars" ]; then
   touch "${HOME}/00files/local/en-vars";
 fi
 
-if [ ! -d "${HOME}/.cache/zsh" ]; then
-  mkdir -p "${HOME}/.cache/zsh";
-fi
-
-if [ ! -d "${HOME}/.cache/zsh/zsh_history" ]; then
-  touch "${HOME}/.cache/zsh/zsh_history";
-fi
-
-
 #zsh plugins
 if [ ! -d "zsh-plugins" ]; then
   mkdir -p "zsh-plugins";
