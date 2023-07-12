@@ -20,10 +20,16 @@ esac
 
 main() {
     echo -e "new-bookmark\n$(cat $workdir)" > $workdir
+    echo -e "delete-bookmark\n$(cat $workdir)" > $workdir
+    echo -e "edit-file\n$(cat $workdir)" > $workdir
     thelink=$(cat $workdir | fzf)
     
     if [ "$thelink" == "new-bookmark" ] ; then
         newitem ""
+    elif [ "$thelink" == "delete-bookmark" ] ; then
+        deleteitem ""
+    elif [ "$thelink" == "edit-file" ] ; then
+        $EDITOR $workdir
     else
         copyitem ""
     fi
@@ -41,9 +47,18 @@ function copyitem() {
     echo $neolink | $ucopy 
 }
 
+function deleteitem() {
+    read -p "DELETE-MODE"
+    todelete=$(cat $workdir | fzf)
+    todelete=$(echo $todelete | awk '{print $1" "$2" "$3}')
+    sed -i "/$todelete/d" $workdir
+}
+
 trap cleanup EXIT INT TERM
 
 function cleanup() {
+    sed -i '1d' $workdir
+    sed -i '1d' $workdir
     sed -i '1d' $workdir
 }
 
