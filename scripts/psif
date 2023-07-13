@@ -1,0 +1,21 @@
+#!/bin/bash
+
+workdir="$HOME/00files/NCED/00-personal/02-notes/info.txt"
+
+case "$(uname -s)" in
+
+    Darwin)
+        upaste='pbpaste'
+        ucopy='pbcopy'
+        ;;
+    Linux)
+        upaste='wl-paste'
+        ucopy='wl-copy'
+        ;;
+    *)
+
+        ;;
+esac
+
+
+cat $workdir | fzf | awk '{$1="";print}' | sed -r 's/^.{1}//' | $ucopy
