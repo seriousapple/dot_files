@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo -n ; curl -s "wttr.in/$CURCITY?format=%t"
