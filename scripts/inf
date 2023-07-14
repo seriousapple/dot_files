@@ -1,6 +1,6 @@
 #!/bin/bash
 
-workdir="$HOME/00files/NCED/00-personal/02-notes/info.txt"
+workdir=$INFDIR
 
 case "$(uname -s)" in
 

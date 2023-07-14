@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-workdir="$HOME/00files/NCED/00-personal/02-notes/bookmarks.txt"
+workdir=$CLIPS
 
 case "$(uname -s)" in
     

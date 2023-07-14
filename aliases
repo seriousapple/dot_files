@@ -3,14 +3,12 @@
 export VISUAL=vim;
 export EDITOR=vim;
 
-export LEDGER_FILE=~/00files/NCED/00-personal/01-accounting/2023.journal
 
 export GPG_TTY=$(tty)
 
 # aliases
 alias duf='xdg-open `fzf`'
 alias vuf='vim `fzf`'
-#alias muf='vim `find ~/00files/NCED/md-database -type f | fzf --preview="cat {}" --preview-window=right:50%:wrap`'
 
 alias hist='history 0 | fzf'
 
@@ -24,33 +22,15 @@ alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
 alias y4a='yt-dlp --add-metadata -xc' #audio only
 alias y4e='yt-dlp --add-metadata --write-thumbnail bestvideo -c'
 
-alias vloa='vim ~/00files/dot_files/local-aliases'
-
-case "$TERM" in
-    xterm-kitty)
-#        alias ssh="kitty +kitten ssh"
-
-        ;;
-    *)
-        #other terminal
-        ;;
-esac
-
 # OS specific
 case "$(uname -s)" in
     
     Darwin)
         alias ls='ls -G' # ls color for macos
-        alias vzs='vim ~/.zshrc'
-        alias vbs='vim ~/.bashrc'
 
         ;;
     Linux)
         alias ls='ls --color' # ls color for linux
-        alias pcmi='sudo pacman -Sy'
-        alias pcms='sudo pacman -Ss'
-        alias vi3='vim ~/.config/i3/config'
-        alias vpb='vim ~/.config/polybar/config.ini'
 
         ;;
     *)
