@@ -13,7 +13,7 @@ alias vuf='vim `fzf`'
 alias hist='history 0 | fzf'
 
 alias q='exit'
-alias la='ls -alh'
+alias la='ls -alh --color'
 alias rn='. ranger'
 alias nb='newsboat'
 alias hl='hledger'
@@ -22,23 +22,17 @@ alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
 alias y4a='yt-dlp --add-metadata -xc' #audio only
 alias y4e='yt-dlp --add-metadata --write-thumbnail bestvideo -c'
 
-# OS specific
-case "$(uname -s)" in
-    
-    Darwin)
-        alias ls='ls -G' # ls color for macos
-
-        ;;
-    Linux)
-        alias ls='ls --color' # ls color for linux
-
-        ;;
-    *)
-        #other os
-        ;;
-esac
-
 #scripts dir
 export PATH=$PATH:~/00files/dot_files/scripts
 export PATH=$PATH:~/.local/bin
+
+#macos gnu
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-units/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+#xdg
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+

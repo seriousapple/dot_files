@@ -2,6 +2,7 @@
 
 # terminal
 term=(
+zsh
 python
 vim
 tmux
@@ -9,15 +10,20 @@ htop
 ranger
 imagemagick
 ffmpeg
+exiftools
 yt-dlp
 newsboat
 hledger
 fzf
 gnu-sed
 gnupg
+gnu-units
+coreutils
 wireguard-tools
 rclone
 rsync
+aerc
+w3m
 )
 
 # essential
@@ -35,34 +41,24 @@ appcleaner
 rectangle
 amorphousdiskmark
 balenaetcher
-)
-
-# extra
-extra=(
 tor-browser
-libreoffice
-virtualbox
 )
 
 echo "what to install"
-select choice in all all-no-extra term extra quit
+select choice in all ess term quit
 do 
     echo "selected is $choice"
     case $choice in 
         all)
-            brew install ${term[@]} ${ess[@]} ${extra[@]}
+            brew install ${term[@]} ${ess[@]} 
             break
             ;;
-        all-no-extra)
-            brew install ${term[@]} ${ess[@]}
+        ess)
+            brew install ${ess[@]}
             break
             ;;
         term)
             brew install ${term[@]}
-            break
-            ;;
-        extra)
-            brew install ${extra[@]}
             break
             ;;
         quit)

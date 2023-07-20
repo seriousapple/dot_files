@@ -19,8 +19,6 @@ case "$(uname -s)" in
         rm -rf ~/.config/i3 \
         ~/.config/polybar \
         ~/.config/fcitx \
-        ~/.config/kitty \
-
         
         #make symbolic link for configs
 
@@ -46,19 +44,26 @@ rm -rf ~/.vimrc \
 ~/.zcompdump \
 ~/.zsh_history \
 
-rm -rf ~/.config/newsboat ~/.newsboat
-
-#make symbolic links
 rm -rf ~/.config/htop \
 ~/.config/mpv \
 ~/.config/ranger \
 ~/.config/tmux \
+~/.config/newsboat ~/.newsboat \
+~/.config/aerc \
+
+#make symbolic links
 
 ln -s ~/00files/dot_files/config/htop ~/.config/htop
 ln -s ~/00files/dot_files/config/mpv ~/.config/mpv
 ln -s ~/00files/dot_files/config/ranger ~/.config/ranger
 ln -s ~/00files/dot_files/config/tmux ~/.config/tmux
 ln -s ~/00files/dot_files/config/newsboat ~/.config/newsboat
+
+if [ ! -d "${HOME}/.config/aerc" ]; then
+    mkdir -p ~/.config/aerc
+fi
+ln -s ~/00files/dot_files/config/aerc/aerc.conf ~/.config/aerc/aerc.conf
+ln -s ~/00files/dot_files/config/aerc/binds.conf ~/.config/aerc/binds.conf
 
 #vim
 if [ ! -d "${HOME}/.vim/undodir" ]; then
