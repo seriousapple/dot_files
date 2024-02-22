@@ -2,6 +2,11 @@ source ~/00files/dot_files/aliases
 source ~/00files/dot_files/ssh-ps1
 source ~/00files/local/en-vars
 
+#vi mode
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
 #history
 
 if [ ! -d "${HOME}/.cache/bash" ]; then
