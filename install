@@ -100,5 +100,5 @@ echo "*********************************"
 echo "*********************************"
 echo "*********************************"
 echo "update git user and email"
-echo "at ~/.config/git/config
+echo "at ~/.config/git/config"
 
