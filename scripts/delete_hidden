@@ -1,2 +1,5 @@
 #!/bin/bash
-find . -name ._* -type f -delete
+arg1=${1:-"."}
+echo "deleting ._* and .ds_store in $arg1"
+find $arg1 -name ._* -o -name .DS_Store -type f -delete -print
+echo "done"
