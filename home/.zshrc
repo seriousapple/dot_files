@@ -21,9 +21,17 @@ HISTFILE=~/.cache/zsh/zsh_history
 
 #config location
 
+#get git branch info
+git_info() {
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+    echo "(${ref#refs/heads/})"
+}
+
 #PS1 colors and layout
-PROMPT="%F{magenta}%~%f"$'\n'"%F$hostStyleZ%n%f@%F{yellow}%m%f%# "
-RPROMPT="%*"
+precmd() {
+  PROMPT="%F{magenta}%~%f"$'\n'"%F$hostStyleZ%n%f@%F{yellow}%m%f$(git_info)%# "
+  RPROMPT="%*"
+}
 
 setopt extended_glob nomatch auto_cd
 
