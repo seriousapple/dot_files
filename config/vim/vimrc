@@ -8,8 +8,6 @@ set shiftwidth=2
 "convert tabs to spaces
 set expandtab
 
-set backspace=indent,eol,start
-
 " line nums
 set nu rnu
 set colorcolumn=79
