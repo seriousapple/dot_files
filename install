@@ -39,10 +39,14 @@ rm -rf ~/.vimrc \
 ~/.bashrc \
 ~/.bash_profile \
 ~/.bash_history \
+~/.bash_logout \
 ~/.tmux.conf \
 ~/.zshrc \
+~/.zshenv \
 ~/.zcompdump \
 ~/.zsh_history \
+~/.lesshst\
+~/.profile\
 
 rm -rf ~/.config/htop \
 ~/.config/mpv \
@@ -66,18 +70,19 @@ ln -s ~/00files/dot_files/config/aerc/aerc.conf ~/.config/aerc/aerc.conf
 ln -s ~/00files/dot_files/config/aerc/binds.conf ~/.config/aerc/binds.conf
 
 #vim
-if [ ! -d "${HOME}/.vim/undodir" ]; then
-    mkdir -p ~/.vim/undodir
+ln -s ~/00files/dot_files/config/vim ~/.config/vim
+
+if [ ! -d "${HOME}/.config/vim/undodir" ]; then
+    mkdir -p ~/.config/vim/undodir
 fi
-ln -s ~/00files/dot_files/home/.vim/vimrc ~/.vim/vimrc
-ln -s ~/00files/dot_files/home/.vim/colors ~/.vim/colors
 
 #bash
 ln -s ~/00files/dot_files/home/.bashrc ~/.bashrc
 ln -s ~/00files/dot_files/home/.bash_profile ~/.bash_profile
 
 #zsh
-ln -s ~/00files/dot_files/home/.zshrc ~/.zshrc
+ln -s ~/00files/dot_files/home/.zshenv ~/.zshenv
+ln -s ~/00files/dot_files/config/zsh ~/.config/zsh
 
 if [ ! -d "${HOME}/00files/local/en-vars" ]; then
   mkdir -p "${HOME}/00files/local";
@@ -85,7 +90,7 @@ if [ ! -d "${HOME}/00files/local/en-vars" ]; then
 fi
 
 #zsh plugins
-zshdirplug="${HOME}/00files/dot_files/zsh-plugins/zsh-syntax-highlighting"
+zshdirplug="${HOME}/00files/dot_files/config/zsh/zsh-plugins/zsh-syntax-highlighting"
 
 if [ -d "$zshdirplug" ]; then
   echo "zshplugins already exist"

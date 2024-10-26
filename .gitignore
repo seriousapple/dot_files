@@ -1,6 +1,9 @@
 .DS_Store
 config/mpv/watch_later
 config/.DS_Store
-zsh-plugins/*
+config/zsh/zsh-plugins/*
 config/polybar/scripts/*
 local-aliases
+config/vim/undodir
+config/vim/.netrwhist
+config/zsh/.zsh_history

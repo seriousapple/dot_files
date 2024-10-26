@@ -34,10 +34,10 @@ set wildmenu
 
 set scrolloff=8 "stop at 8 lines before end when scrolling
 
-set undodir=~/.vim/undodir"
+set undodir=~/.config/vim/undodir"
 set undofile
 
-set viminfo+=n~/.vim/viminfo
+set viminfo+=n~/.cache/viminfo
 
 colorscheme gruvbox
 set background=dark
