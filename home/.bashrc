@@ -1,5 +1,6 @@
 source ~/00files/dot_files/aliases
 source ~/00files/dot_files/ssh-ps1
+source ~/00files/dot_files/gitprompt
 source ~/00files/local/en-vars
 
 #vi mode
@@ -21,11 +22,14 @@ export HISTFILE=~/.cache/bash/bash_history
 HISTTIMEFORMAT="%Y-%m-%d %T "
 
 # prompt
-PS1="\[$(tput setaf 5)\]\w\n"; # path
-PS1+="\[${hostStyle}\]\u"; # host
-PS1+="\[$(tput setaf 15)\]@"; # @
+PS1="\[${hostStyle}\]\u"; # host
+PS1+="\[$(tput setaf 15)\] at "; # @
 PS1+="\[$(tput setaf 11)\]\h"; # user 
-PS1+="\[$(tput setaf 15)\]$ "; # $
+PS1+="\[$(tput setaf 15)\] in "; # in
+PS1+="\[$(tput setaf 5)\]\w\n"; # path
+PS1+="\[$(tput setaf 15)\]\t "; # time
+PS1+="\$(set_rprompt)\n"; # time
+PS1+="\$ "; # $
 PS1+="\[$(tput sgr0)\]" # end
 
 export PS1;

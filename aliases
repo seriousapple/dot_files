@@ -30,6 +30,7 @@ export PATH=$PATH:~/.local/bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-units/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 #xdg
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
