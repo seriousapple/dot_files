@@ -62,6 +62,7 @@ ln -s ~/00files/dot_files/config/mpv ~/.config/mpv
 ln -s ~/00files/dot_files/config/ranger ~/.config/ranger
 ln -s ~/00files/dot_files/config/tmux ~/.config/tmux
 ln -s ~/00files/dot_files/config/newsboat ~/.config/newsboat
+ln -s ~/00files/dot_files/config/kitty ~/.config/kitty
 
 if [ ! -d "${HOME}/.config/aerc" ]; then
     mkdir -p ~/.config/aerc
