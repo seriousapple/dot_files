@@ -96,7 +96,6 @@ zshdirplug="${HOME}/00files/dot_files/config/zsh/zsh-plugins/zsh-syntax-highligh
 if [ -d "$zshdirplug" ]; then
   echo "zshplugins already exist"
 else
-  mkdir -p "zsh-plugins";
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $zshdirplug
 fi
 
