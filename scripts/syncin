@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rclone sync -v dbx: ~/00files/Dropbox
-rclone sync -v nced: ~/00files/NCED
+rclone sync -v dbx: ~/00files/Dropbox --exclude ".DS_Store" --exclude "._*"
+rclone sync -v nced: ~/00files/NCED --exclude ".DS_Store" --exclude "._*"
