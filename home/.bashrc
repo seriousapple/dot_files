@@ -35,3 +35,6 @@ PS1+="\[$(tput sgr0)\]" # end
 export PS1;
 export BASH_SILENCE_DEPRECATION_WARNING=1; #macos only
 
+# fzf integration
+eval "$(fzf --bash)"
+

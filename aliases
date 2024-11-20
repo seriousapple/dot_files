@@ -8,11 +8,7 @@ export GPG_TTY=$(tty)
 
 # aliases
 alias duf='xdg-open `fzf`'
-alias vuf='vim `fzf`'
 
-alias hist='history 0 | fzf'
-
-alias q='exit'
 alias la='ls -alh --color'
 alias rn='. ranger'
 alias nb='newsboat'
@@ -27,10 +23,16 @@ export PATH=$PATH:~/00files/dot_files/scripts
 export PATH=$PATH:~/.local/bin
 
 #macos gnu
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-units/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
+case "$(uname -s)" in
+  Darwin)
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/gnu-units/libexec/gnubin:$PATH"
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/bin:$PATH"
+    ;;
+  *)
+    ;;
+esac
 
 #xdg
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}

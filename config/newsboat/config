@@ -1,5 +1,5 @@
 urls-source freshrss
-freshrss-url "http://10.69.0.101:8090/api/greader.php"
+freshrss-url "http://10.69.0.98:8090/api/greader.php"
 freshrss-login yaya
 freshrss-passwordeval "echo $FRSSP"
 freshrss-min-items 100

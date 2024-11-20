@@ -1,35 +1,26 @@
 #!/usr/bin/env bash
 
 case "$(uname -s)" in
-    
-    Darwin)
-        #remove configs
-        rm -rf ~/.config/*
-
-        #make symbolic link for configs
-#        ln -s ~/00files/dot_files/config/karabiner ~/.config/karabiner
-
-        #install apps    
-        ./formac/macos
-        ./formac/brew
-
-        ;;
-    Linux)
-        #remove configs 
-        rm -rf ~/.config/i3 \
-        ~/.config/polybar \
-        ~/.config/fcitx \
-        
-        #make symbolic link for configs
-
-        ln -s ~/00files/dot_files/config/i3 ~/.config/i3
-        ln -s ~/00files/dot_files/config/polybar ~/.config/polybar
-        ln -s ~/00files/dot_files/config/fcitx ~/.config/fcitx
-
-        ;;
-    *)
-        #other os
-        ;;
+  Darwin)
+    #remove configs
+    rm -rf ~/.config/*
+    #install apps    
+    ./formac/macos
+    ./formac/brew
+    ;;
+  Linux)
+    #remove configs 
+    rm -rf ~/.config/i3 \
+    ~/.config/polybar \
+    ~/.config/fcitx \
+    #make symbolic link for configs
+    ln -s ~/00files/dot_files/config/i3 ~/.config/i3
+    ln -s ~/00files/dot_files/config/polybar ~/.config/polybar
+    ln -s ~/00files/dot_files/config/fcitx ~/.config/fcitx
+    ;;
+  *)
+    #other os
+    ;;
 esac
 
 #remove configs
@@ -45,8 +36,8 @@ rm -rf ~/.vimrc \
 ~/.zshenv \
 ~/.zcompdump \
 ~/.zsh_history \
-~/.lesshst\
-~/.profile\
+~/.lesshst \
+~/.profile \
 
 rm -rf ~/.config/htop \
 ~/.config/mpv \
