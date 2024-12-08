@@ -1,8 +1,13 @@
 #!/bin/bash
 
 copyfromdir="/Volumes/4tb-exfat"
-copyto1dir="/Volumes/2tb-data"
+copyto1dir="/Volumes/data"
 copyto2dir="/Volumes/2tb-media"
+
+HIDDENEXCLUDE=(
+  "._*"
+  ".DS_Store"
+)
 
 MEDIAEXCLUDE=(
   "*.mkv"
@@ -18,17 +23,17 @@ case "$(uname -s)" in
     Darwin)
         
         echo "--- copy data ---" 
-        rsync -aP --delete --exclude="._*" "$copyfromdir/00-backup/" "$copyto1dir/00-backup/"
-        rsync -aP --delete --exclude="._*" "$copyfromdir/02-prod/" "$copyto1dir/02-prod/"
-        rsync -aP --delete --exclude="._*" "$copyfromdir/03-PP/" "$copyto1dir/03-PP/"
-        rsync -aP --delete --exclude="._*" "$copyfromdir/08-p-pc/" "$copyto1dir/08-p-pc/"
-        rsync -aP --delete --exclude="._*" "$copyfromdir/09-db/" "$copyto1dir/09-db/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$copyfromdir/00-backup/" "$copyto1dir/00-backup/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$copyfromdir/02-prod/" "$copyto1dir/02-prod/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$copyfromdir/03-PP/" "$copyto1dir/03-PP/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$copyfromdir/08-p-pc/" "$copyto1dir/08-p-pc/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$copyfromdir/09-db/" "$copyto1dir/09-db/"
 
         echo "--- copy partial media ---"
-        rsync -aP "${MEDIAEXCLUDE[@]/#/--exclude=}" "$copyfromdir/01-media/" "$copyto1dir/01-media/"
+        rsync -avP "${MEDIAEXCLUDE[@]/#/--exclude=}" "${HIDDENEXCLUDE[@]/#/--exclude=}" "$copyfromdir/01-media/" "$copyto1dir/01-media/"
         
-        echo "--- copy media ---"
-        rsync -aP --delete --exclude="._*" "$copyfromdir/01-media/" "$copyto2dir/01-media/"
+#        echo "--- copy media ---"
+#        rsync -avP --delete --exclude="._*" "$copyfromdir/01-media/" "$copyto2dir/01-media/"
 
         ;;
     Linux)
