@@ -1,18 +1,21 @@
 #!/bin/bash
 
+dirpath="/Volumes/data"
+
+HIDDENEXCLUDE=(
+  "._*"
+  ".DS_Store"
+)
+
 case "$(uname -s)" in
     
     Darwin)
 
-        rsync -aP --delete /Volumes/4tb-exfat/00-backup/DBX/ ~/00files/Dropbox/
-        rsync -aP --delete /Volumes/4tb-exfat/00-backup/NCED/ ~/00files/NCED/
-        rsync -aP --delete /Volumes/4tb-exfat/00-backup/local/ ~/00files/local/
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$dirpath/00-backup/DBX/" "~/00files/Dropbox/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$dirpath/00-backup/NCED/" "~/00files/NCED/"
+        rsync -avP --delete "${HIDDENEXCLUDE[@]/#/--exclude=}" "$dirpath/00-backup/local/" "~/00files/local/"
         ;;
     Linux)
-        dirpath="/run/user/1000/gvfs/smb-share:server=keenetic-6508.local,share"
-        rsync -aP --delete $dirpath=4tb-exfat/00-backup/DBX/ ~/00files/Dropbox/
-        rsync -aP --delete $dirpath=4tb-exfat/00-backup/NCED/ ~/00files/NCED/
-        rsync -aP --delete $dirpath=4tb-exfat/00-backup/local/ ~/00files/local/
         ;;
     *)
         #other os
