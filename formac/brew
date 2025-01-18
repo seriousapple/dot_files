@@ -28,45 +28,47 @@ w3m
 
 # essential
 ess=(
-iterm2
+firefox
+kitty
 stats
 telegram
 vlc
 homebrew/cask/mpv
 spotify
 transmission
+keepassxc
 #utils
 the-unarchiver
 appcleaner
-rectangle
 amorphousdiskmark
 balenaetcher
 tor-browser
 )
 
-echo "what to install"
-select choice in all ess term quit
-do 
-    echo "selected is $choice"
-    case $choice in 
-        all)
-            brew install ${term[@]} ${ess[@]} 
-            break
-            ;;
-        ess)
-            brew install ${ess[@]}
-            break
-            ;;
-        term)
-            brew install ${term[@]}
-            break
-            ;;
-        quit)
-            break
-            ;;
-        *)
-            echo "invalid"
-            ;;
-    esac
-done
+brew install ${term[@]} ${ess[@]} 
+#echo "what to install"
+#select choice in all ess term quit
+#do 
+#    echo "selected is $choice"
+#    case $choice in 
+#        all)
+#            brew install ${term[@]} ${ess[@]} 
+#            break
+#            ;;
+#        ess)
+#            brew install ${ess[@]}
+#            break
+#            ;;
+#        term)
+#            brew install ${term[@]}
+#            break
+#            ;;
+#        quit)
+#            break
+#            ;;
+#        *)
+#            echo "invalid"
+#            ;;
+#    esac
+#done
 
