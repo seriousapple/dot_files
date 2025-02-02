@@ -167,4 +167,9 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
+### SHORTCUTS
+
+defaults write -g NSUserKeyEquivalents -dict-add "Right" "@^l"
+defaults write -g NSUserKeyEquivalents -dict-add "Left" "@^h"
+defaults write -g NSUserKeyEquivalents -dict-add "Fill" "@^k"
 
