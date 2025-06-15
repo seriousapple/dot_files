@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "------Syncing Dropbox--------"
+echo "-----------------------------"
 rclone check dbx: ~/00files/Dropbox --exclude ".DS_Store" --exclude "._*"
+echo "------Syncing Nextcloud------"
+echo "-----------------------------"
 rclone check nced: ~/00files/NCED --exclude ".DS_Store" --exclude "._*"
 
