@@ -7,7 +7,7 @@ python
 vim
 tmux
 htop
-ranger
+lf
 imagemagick
 ffmpeg
 exiftool
@@ -35,12 +35,13 @@ telegram
 vlc
 homebrew/cask/mpv
 spotify
-transmission
+homebrew/cask/transmission
 keepassxc
+xbar
 #utils
 the-unarchiver
 appcleaner
-amorphousdiskmark
+#amorphousdiskmark
 balenaetcher
 tor-browser
 )
