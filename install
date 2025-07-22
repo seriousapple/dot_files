@@ -4,6 +4,9 @@ case "$(uname -s)" in
   Darwin)
     #remove configs
     rm -rf ~/.config/*
+    #set link for xbar plugins
+    mkdir -p /Users/yaya/Library/Application\ Support/xbar/plugins/
+    ln -s /Users/yaya/00files/dot_files/formac/xbar/* /Users/yaya/Library/Application\ Support/xbar/plugins/
     #install apps    
     ./formac/macos
     ./formac/brew
