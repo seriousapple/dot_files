@@ -95,11 +95,13 @@ fi
 
 mkdir -p ~/.config/git
 #other
+
+git config --global user.name "${GITUSER}"
+git config --global user.email "${GITEMAIL}"
+
 echo "*********************************"
 echo "*********************************"
 echo "*********************************"
 echo "*********************************"
 echo "*********************************"
-echo "update git user and email"
-echo "at ~/.config/git/config"
 
