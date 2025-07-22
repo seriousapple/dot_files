@@ -38,6 +38,7 @@ spotify
 homebrew/cask/transmission
 keepassxc
 xbar
+battery-toolkit
 #utils
 the-unarchiver
 appcleaner
@@ -45,6 +46,9 @@ appcleaner
 balenaetcher
 tor-browser
 )
+
+#add battery-toolkit tap
+brew tap mhaeuser/mhaeuser
 
 brew install ${term[@]} ${ess[@]} 
 #echo "what to install"
