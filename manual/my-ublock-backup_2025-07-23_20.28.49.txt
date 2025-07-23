@@ -1,0 +1,63 @@
+{
+  "timeStamp": 1753284529334,
+  "version": "1.65.0",
+  "userSettings": {
+    "contextMenuEnabled": false,
+    "externalLists": "https://filters.adtidy.org/windows/filters/17.txt\nhttps://get.letsblock.it/list/b0d6c1ea-7d41-42bb-a0d6-8af6bfad6a73.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/ClearURLs for uBo/clear_urls_uboified.txt\nhttps://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/all_search_engines/global.txt\nhttps://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
+    "ignoreGenericCosmeticFilters": true,
+    "importedLists": [
+      "https://filters.adtidy.org/windows/filters/17.txt",
+      "https://get.letsblock.it/list/b0d6c1ea-7d41-42bb-a0d6-8af6bfad6a73.txt",
+      "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ClearURLs for uBo/clear_urls_uboified.txt",
+      "https://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/all_search_engines/global.txt",
+      "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt"
+    ],
+    "largeMediaSize": 1000,
+    "popupPanelSections": 31
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "plowe-0",
+    "dpollock-0",
+    "fanboy-cookiemonster",
+    "ublock-cookies-easylist",
+    "adguard-cookies",
+    "ublock-cookies-adguard",
+    "fanboy-social",
+    "adguard-social",
+    "fanboy-thirdparty_social",
+    "ublock-annoyances",
+    "CHN-0",
+    "JPN-1",
+    "RUS-0",
+    "RUS-1",
+    "UKR-0",
+    "https://filters.adtidy.org/windows/filters/17.txt",
+    "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/ClearURLs for uBo/clear_urls_uboified.txt",
+    "https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt",
+    "https://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/all_search_engines/global.txt"
+  ],
+  "hiddenSettings": {
+    "autoUpdateAssetFetchPeriod": 120,
+    "autoUpdateDelayAfterLaunch": 180,
+    "autoUpdatePeriod": 7,
+    "blockingProfiles": "11111/#F00 11011/#C0F 11001/#00F 00001",
+    "cloudStorageCompression": false,
+    "uiPopupConfig": "undocumented"
+  },
+  "whitelist": [
+    "# chrome-extension-scheme",
+    "moz-extension-scheme"
+  ],
+  "dynamicFilteringString": "",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "",
+  "userFilters": "www.youtube.com##ytd-guide-renderer a.yt-simple-endpoint path[d^=\"M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33\"]:upward(ytd-guide-entry-renderer)\nwww.youtube.com##ytd-mini-guide-renderer a.yt-simple-endpoint path[d^=\"M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33\"]:upward(ytd-mini-guide-entry-renderer)\nwww.youtube.com##ytd-browse[page-subtype=\"home\"] .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-rich-item-renderer)\nwww.youtube.com##ytd-browse[page-subtype=\"subscriptions\"] .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)\nwww.youtube.com##ytd-search .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-video-renderer)\nwww.youtube.com##ytd-browse[page-subtype=\"subscriptions\"] ytd-video-renderer .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-item-section-renderer)\nwww.youtube.com##ytd-watch-next-secondary-results-renderer .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-compact-video-renderer,ytd-shelf-renderer)\nwww.youtube.com##ytd-browse[page-subtype=\"trending\"] .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-video-renderer)\nwww.youtube.com##ytd-search .ytd-thumbnail[href^=\"/shorts/\"]:upward(ytd-video-renderer)\nwww.youtube.com##ytd-notification-renderer:has(> a[href^=\"/shorts/\"])\nwww.youtube.com##ytd-rich-shelf-renderer[is-shorts]\nwww.youtube.com##ytd-rich-shelf-renderer[is-shorts].ytd-rich-section-renderer:upward(ytd-rich-section-renderer)\nwww.youtube.com##ytd-reel-shelf-renderer\nm.youtube.com##ytm-reel-shelf-renderer\nm.youtube.com##ytm-pivot-bar-renderer div.pivot-shorts:upward(ytm-pivot-bar-item-renderer)\nm.youtube.com##ytm-browse ytm-item-section-renderer ytm-thumbnail-overlay-time-status-renderer[data-style=\"SHORTS\"]:upward(ytm-video-with-context-renderer)\nm.youtube.com##ytm-browse ytm-item-section-renderer ytm-thumbnail-overlay-time-status-renderer[data-style=\"SHORTS\"]:upward(ytm-compact-video-renderer)\nm.youtube.com##ytm-search ytm-thumbnail-overlay-time-status-renderer[data-style=\"SHORTS\"]:upward(ytm-compact-video-renderer,ytm-video-with-context-renderer)\nm.youtube.com##ytm-single-column-watch-next-results-renderer ytm-thumbnail-overlay-time-status-renderer span:has-text(/^(0:\\d\\d|1:0\\d)$/):upward(ytm-video-with-context-renderer)\nyoutube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display:contents !important;)\n\n\nwww.youtube.com##ytd-browse #video-title-link[href*=\"&start_radio=1\"]:upward(ytd-rich-item-renderer)\nwww.youtube.com##ytd-search ytd-radio-renderer\nwww.youtube.com##ytd-watch-next-secondary-results-renderer ytd-compact-radio-renderer\nwww.youtube.com##ytd-player div.videowall-endscreen a[data-is-list=true]\nm.youtube.com##ytm-browse ytm-radio-renderer:upward(ytm-rich-item-renderer)\nm.youtube.com##ytm-search ytm-compact-radio-renderer\nyoutube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display:contents !important;)\n\n\n*$removeparam=utm_source\n*$removeparam=utm_medium\n*$removeparam=utm_campaign\n*$removeparam=utm_content\n\nwww.youtube.com###description #info a[href^=\"/hashtag/\"]\nwww.youtube.com##.super-title\nm.youtube.com##.standalone-collection-badge a[href^=\"/hashtag/\"]\nm.youtube.com##ytm-video-description-header-renderer button-view-model a[href^=\"/hashtag/\"]\nwww.youtube.com###description .ytd-watch-metadata #items:has(.ytd-video-description-music-section-renderer)\nwww.youtube.com###description .ytd-watch-metadata #items > ytd-horizontal-card-list-renderer:has(ytd-video-attribute-view-model)\nm.youtube.com##.video-attribute-card-shelf:has(yt-video-attribute-view-model):upward(ytm-horizontal-card-list-renderer)\nwww.youtube.com###chat:remove()\nyoutube.com##+js(aeld, dblclick)\nwww.youtube.com###cinematics.ytd-watch-flexy:remove()"
+}

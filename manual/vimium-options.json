@@ -1,0 +1,27 @@
+{
+  "linkHintCharacters": "asdflkjgh",
+  "scrollStepSize": 90,
+  "settingsVersion": "2.3",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "<",
+      "pattern": "https?://www.youtube.com/*"
+    },
+    {
+      "passKeys": ">",
+      "pattern": "https?://www.youtube.com/*"
+    },
+    {
+      "passKeys": "t",
+      "pattern": "https?://www.youtube.com/*"
+    },
+    {
+      "passKeys": "c",
+      "pattern": "https?://www.youtube.com/*"
+    }
+  ]
+}

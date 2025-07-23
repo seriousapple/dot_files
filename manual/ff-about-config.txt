@@ -1,0 +1,8 @@
+browser.search.openintab - True #Open in new tab from search bar
+mousewheel.with_control.action - 0 #Stop zooming with ctrl+scroll
+mousewheel.with_meta.action - 0 #Stop zooming with cmd+scroll
+browser.backspace_action - 2
+browser.tabs.loadBookmarksInTabs - True #Open bookmarks in new tabs
+browser.tabs.loadBookmarksInBackground - True #Open bookmarks in the background
+browser.gesture.swipe.left - <blank>
+browser.gesture.swipe.right - <blank>
