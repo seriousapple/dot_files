@@ -6,3 +6,4 @@ browser.tabs.loadBookmarksInTabs - True #Open bookmarks in new tabs
 browser.tabs.loadBookmarksInBackground - True #Open bookmarks in the background
 browser.gesture.swipe.left - <blank>
 browser.gesture.swipe.right - <blank>
+privacy.userContext.newTabContainerOnLeftClick.enabled - True #Open new containers on left click 

@@ -38,3 +38,4 @@ export BASH_SILENCE_DEPRECATION_WARNING=1; #macos only
 # fzf integration
 eval "$(fzf --bash)"
 
+. "$HOME/.cargo/env"
