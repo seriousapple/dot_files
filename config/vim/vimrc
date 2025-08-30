@@ -39,6 +39,10 @@ set undofile
 
 set viminfo+=n~/.cache/viminfo
 
+" show space tabs
+set listchars=multispace:▸\ ,trail:~,extends:>,precedes:<,nbsp:%
+set list
+
 colorscheme gruvbox
 set background=dark
 set t_Co=256
