@@ -17,10 +17,10 @@ humi=$(call_hass "/api/states/sensor.aqara_sensor_bedroom_humidity")
 humiwater=$(call_hass "/api/states/sensor.smartmi_evaporative_humidifer_2_water_level")
 
 # Extract the "state" value from the JSON response
-output1="w $(echo "$wthr" | jq -r '.attributes.temperature | floor')"
-output2="t $(echo "$temp" | jq -r '.state | split(".")[0]')"
-output3="h $(echo "$humi" | jq -r '.state | split(".")[0]')"
-output4="wl $(echo "$humiwater" | jq -r '.state | split(".")[0]')"
+wthr="$(echo "$wthr" | jq -r '.attributes.temperature | floor')"
+temp="$(echo "$temp" | jq -r '.state | split(".")[0]')"
+humi="$(echo "$humi" | jq -r '.state | split(".")[0]')"
+humiwater="$(echo "$humiwater" | jq -r '.state | split(".")[0]')"
 
 # Print the output to xbar
 final="$(
@@ -30,5 +30,10 @@ final="$(
   echo -n "$output4 "
 )"
 
-echo "$final"
+echo "t $temp h $humi"
+echo "---"
+echo "$wthr outside temp"
+echo "$temp temperature"
+echo "$humi humidity"
+echo "$humiwater humi water level"
 
