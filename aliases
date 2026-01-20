@@ -13,10 +13,11 @@ alias la='ls -alh --color'
 alias rn='. ranger'
 alias nb='newsboat'
 alias hl='hledger'
+alias k='kubectl'
 
 alias y4='yt-dlp --add-metadata -f mp4 -c' #video in mp4
 alias y4a='yt-dlp --add-metadata -xc' #audio only
-alias y4e='yt-dlp --add-metadata --write-thumbnail bestvideo -c'
+alias ybc='yt-dlp -f bestaudio --embed-metadata --embed-thumbnail --add-metadata' #bandcamp dl with metadata
 
 #scripts dir
 export PATH=$PATH:~/00files/dot_files/scripts
