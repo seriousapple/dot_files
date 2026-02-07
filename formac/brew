@@ -24,6 +24,7 @@ rclone
 rsync
 aerc
 w3m
+wget
 )
 
 # essential
