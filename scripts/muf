@@ -25,7 +25,7 @@ main() {
         touch_create_parent "$file_to_edit"
     fi
         rm "$new_file_creation_option"
-        "$EDITOR" "$file_to_edit"
+        ${EDITOR:-vi} "${file_to_edit}"
         main "$file_to_edit"
     fi
     cd -
