@@ -12,6 +12,10 @@
 
 (setq calendar-week-start-day 1)
 
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq scroll-margin 3)
+
 (require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
