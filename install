@@ -64,6 +64,12 @@ fi
 ln -s ~/00files/dot_files/config/aerc/aerc.conf ~/.config/aerc/aerc.conf
 ln -s ~/00files/dot_files/config/aerc/binds.conf ~/.config/aerc/binds.conf
 
+#emacs
+if [ ! -d "${HOME}/.config/emacs" ]; then
+    mkdir -p ~/.config/emacs
+fi
+ln -s ~/00files/dot_files/config/emacs/init.el ~/.config/emacs/init.el
+
 #vim
 ln -s ~/00files/dot_files/config/vim ~/.config/vim
 
