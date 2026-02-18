@@ -11,6 +11,8 @@
 (set-face-attribute 'default nil :family "Fira Code" :height 180)
 
 (setq calendar-week-start-day 1)
+(global-set-key (kbd "C-c c") #'calendar)
+(global-set-key (kbd "C-c f") #'fzf-directory)
 
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
