@@ -10,6 +10,9 @@
 (set-fringe-mode 10)
 (set-face-attribute 'default nil :family "Fira Code" :height 180)
 
+(setq backup-directory-alist
+      `(("." . "~/.cache/emacs_backups")))
+
 (setq calendar-week-start-day 1)
 (global-set-key (kbd "C-c c") #'calendar)
 (global-set-key (kbd "C-c f") #'fzf-directory)
@@ -48,7 +51,7 @@
    '("2ff9ac386eac4dffd77a33e93b0c8236bb376c5a5df62e36d4bfa821d56e4e20"
      "b1a691bb67bd8bd85b76998caf2386c9a7b2ac98a116534071364ed6489b695d"
      default))
- '(package-selected-packages '(evil fzf gruvbox-theme magit)))
+ '(package-selected-packages '(evil fzf gruvbox-theme hledger-mode magit)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
