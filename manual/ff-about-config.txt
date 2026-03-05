@@ -6,4 +6,19 @@ browser.tabs.loadBookmarksInTabs - True #Open bookmarks in new tabs
 browser.tabs.loadBookmarksInBackground - True #Open bookmarks in the background
 browser.gesture.swipe.left - <blank>
 browser.gesture.swipe.right - <blank>
-privacy.userContext.newTabContainerOnLeftClick.enabled - True #Open new containers on left click 
+privacy.userContext.newTabContainerOnLeftClick.enabled - True #Open new containers on left click
+
+#disable context menu things
+
+browser.translations.select.enable - False #disable translate
+screenshots.browser.component.enabled - False #disable screenshot tools
+dom.text_fragments.enabled - False #disable copy link to hightlight
+privacy.query_stripping.strip_on_share.enabled - False #disable copy clean link
+devtools.accessibility.enabled - False #disable Inspect Accessibility Properties
+browser.ml.chat.menu - False #disable ai
+browser.ml.linkPreview.enabled - False #disable ai
+dom.text-recognition.enabled - False #disable ocr
+browser.search.visualSearch.featureGate - False #disable google lens
+extensions.formautofill.addresses.enabled - False #disable autofill
+extensions.formautofill.creditCards.enabled - False #disable autofill
+
