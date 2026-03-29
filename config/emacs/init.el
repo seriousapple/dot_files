@@ -16,6 +16,7 @@
 (setq calendar-week-start-day 1)
 (global-set-key (kbd "C-c c") #'calendar)
 (global-set-key (kbd "C-c f") #'fzf-directory)
+(global-set-key (kbd "C-c e") #'evil-mode)
 
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
