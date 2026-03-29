@@ -24,7 +24,8 @@ set is ic hls
 set laststatus=2 ruler showcmd
 
 " use system clipboard
-set clipboard=unnamedplus "for linux
+"set clipboard=unnamedplus "for linux
+set clipboard=unnamed "for mac
 
 " autocomplition
 set wildmenu
