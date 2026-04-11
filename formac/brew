@@ -39,8 +39,7 @@ spotify
 homebrew/cask/transmission
 keepassxc
 xbar
-battery-toolkit
-#utils
+homebrew/cask/linearmouse
 the-unarchiver
 appcleaner
 #amorphousdiskmark
@@ -48,10 +47,7 @@ balenaetcher
 tor-browser
 )
 
-#add battery-toolkit tap
-brew tap mhaeuser/mhaeuser
-
-brew install ${term[@]} ${ess[@]} 
+brew install ${term[@]} ${ess[@]}
 #echo "what to install"
 #select choice in all ess term quit
 #do 
