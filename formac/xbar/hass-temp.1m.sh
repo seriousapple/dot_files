@@ -21,6 +21,7 @@ humi_bedroom=$(call_hass "/api/states/sensor.aqara_sensor_bedroom_humidity")
 humi_kitchen=$(call_hass "/api/states/sensor.aqara_sensors_kitchen_humidity")
 humi_bathroom=$(call_hass "/api/states/sensor.aqara_sensor_bathroom_humidity")
 humiwater=$(call_hass "/api/states/sensor.smartmi_evaporative_humidifer_2_water_level")
+humistate=$(call_hass "/api/states/humidifier.smartmi_evaporative_humidifer_2")
 
 wthr="$(echo "$wthr" | jq -r '.attributes.temperature | floor')"
 temp_bedroom="$(echo "$temp_bedroom" | jq -r '.state | split(".")[0]')"
@@ -32,8 +33,9 @@ humi_bedroom="$(echo "$humi_bedroom" | jq -r '.state | split(".")[0]')"
 humi_kitchen="$(echo "$humi_kitchen" | jq -r '.state | split(".")[0]')"
 humi_bathroom="$(echo "$humi_bathroom" | jq -r '.state | split(".")[0]')"
 humiwater="$(echo "$humiwater" | jq -r '.state | split(".")[0]')"
+humistate="$(echo "$humistate" | jq -r '.state | split(".")[0]')"
 
-echo "t $temp_bedroom h $humi_bedroom"
+echo "t $temp_bedroom h $humi_bedroom $humistate"
 echo "---"
 echo "$wthr - outside temp"
 echo "br $temp_bedroom kt $temp_kitchen bt $temp_bathroom - temperature"
